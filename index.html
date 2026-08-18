@@ -606,25 +606,13 @@ ul.gaps li{margin:3px 0}
   </section>
   <section class="block">
     <h2>Today’s work — 8 for me,
-        8 for someone else</h2>
+        7 for someone else</h2>
     <p class="lead">Every row exists because a measurement put it there. The “why” under
       each task is the evidence that generated it.</p>
     
     <div class="scroller"><table class="grid">
       <thead><tr><th>Type</th><th>Task &amp; why it is here</th><th>Runs via</th><th>Owner</th></tr></thead>
       <tbody>
-        <tr>
-          <td><span class="chip chip-danger">blocker</span></td>
-          <td class="t-title"><b>Google API credentials missing</b><p class="because">Declared blocker (critical) — blocks gsc_impressions, gsc_clicks, nonbrand_queries, organic_sessions, cwv_perf</p><details><summary>detail</summary><pre>Tier -1. Needs service_account.json + api_key. SA also 403s — re-add as GSC Owner.</pre></details></td>
-          <td><span class="muted">—</span></td>
-          <td><span class="owner owner-account owner">account owner</span></td>
-        </tr>
-        <tr>
-          <td><span class="chip chip-danger">blocker</span></td>
-          <td class="t-title"><b>WordPress app password missing</b><p class="because">Declared blocker (critical) — blocks all_site_edits</p><details><summary>detail</summary><pre>wp-json/mcp/novamira returns 401 — site is read-only, no fixes can be shipped.</pre></details></td>
-          <td><span class="muted">—</span></td>
-          <td><span class="owner owner-account owner">account owner</span></td>
-        </tr>
         <tr>
           <td><span class="chip chip-danger">blocker</span></td>
           <td class="t-title"><b>Google Business Profile not verified</b><p class="because">Declared blocker (critical) — blocks local_pack, reviews</p><details><summary>detail</summary><pre>Video verification pending, needs the San Diego partner to film it.</pre></details></td>
@@ -704,6 +692,12 @@ ul.gaps li{margin:3px 0}
           <td><span class="owner owner-host">Host</span></td>
         </tr>
         <tr>
+          <td><span class="chip chip-danger">blocker</span></td>
+          <td class="t-title"><b>Google APIs unreachable from the workstation</b><p class="because">Declared blocker (low) — blocks </p><details><summary>detail</summary><pre>Resolved by architecture on 2026-08-18, kept visible because it constrains where collection can run. Credentials are valid — GA4 and OAuth answer from the box — but Google&#x27;s edge refuses its IP (ArvanCloud AS57568) for the Search Console and PageSpeed surfaces: an invalid token returns a 403 HTML page instead of a JSON 401, so the request never reaches the API. No credential fixes that. CI on GitHub&#x27;s runners collects those daily at 08:45 UTC and the box merges the result at 09:15.</pre></details></td>
+          <td><span class="muted">—</span></td>
+          <td><span class="owner owner-none">none</span></td>
+        </tr>
+        <tr>
           <td><span class="chip chip-muted">monitor</span></td>
           <td class="t-title"><b>Run drift check against yesterday&#x27;s baseline</b><p class="because">Daily regression guard — a cache flush on this site has silently 404&#x27;d every post before (handoff gotcha #13)</p></td>
           <td><code class="agent">seo-drift</code></td>
@@ -712,15 +706,12 @@ ul.gaps li{margin:3px 0}
     </table></div>
   </section>
   <section class="block">
-    <h2>Blockers — 3 critical</h2>
+    <h2>Blockers — 1 critical</h2>
     <p class="lead">These cap everything downstream. No amount of on-site work substitutes
       for them, so they are shown every day until they clear.</p>
-    <ul class="blockers"><li class="blocker sev-critical">
-              <div><b>Google API credentials missing</b><span class="owner owner-account-owner">account owner</span></div>
-              <p>Tier -1. Needs service_account.json + api_key. SA also 403s — re-add as GSC Owner.</p>
-            </li><li class="blocker sev-critical">
-              <div><b>WordPress app password missing</b><span class="owner owner-account-owner">account owner</span></div>
-              <p>wp-json/mcp/novamira returns 401 — site is read-only, no fixes can be shipped.</p>
+    <ul class="blockers"><li class="blocker sev-low">
+              <div><b>Google APIs unreachable from the workstation</b><span class="owner owner-none">none</span></div>
+              <p>Resolved by architecture on 2026-08-18, kept visible because it constrains where collection can run. Credentials are valid — GA4 and OAuth answer from the box — but Google&#x27;s edge refuses its IP (ArvanCloud AS57568) for the Search Console and PageSpeed surfaces: an invalid token returns a 403 HTML page instead of a JSON 401, so the request never reaches the API. No credential fixes that. CI on GitHub&#x27;s runners collects those daily at 08:45 UTC and the box merges the result at 09:15.</p>
             </li><li class="blocker sev-critical">
               <div><b>Google Business Profile not verified</b><span class="owner owner-client">client</span></div>
               <p>Video verification pending, needs the San Diego partner to film it.</p>
@@ -1204,7 +1195,7 @@ ul.gaps li{margin:3px 0}
         <h3>Expansion — content on winnable terms</h3>
         <ul><li>2 posts/week held</li><li>Money spokes for ecommerce + local-SEO</li><li>First non-brand clicks</li><li>Reviews 0 → 8</li></ul>
         <p class="exit"><b>Exit criteria:</b> 8+ posts · 2 new spokes · first non-brand clicks · 8 reviews</p>
-        <p class="outstanding">Still open: reviews, gsc_credentials</p>
+        <p class="outstanding">Still open: reviews</p>
         <p class="agents"><code class="agent">seo-content</code><code class="agent">seo-content-brief</code><code class="agent">seo-cluster</code><code class="agent">seo-geo</code></p>
       </article>
       <article class="theme state-upcoming">
@@ -1368,7 +1359,7 @@ ul.gaps li{margin:3px 0}
             <tr>
               <td><span class="chip chip-muted">index_submit_unindexed</span></td>
               <td class="t-title"><b>4 unindexed URLs</b>
-                <p class="because">Search Console reports 4 live URL(s) not indexed — /about/ (Discovered - currently not indexed); /blog/ (Discovered - currently not indexed); /services/ (URL is unknown to Google); /website-hosting-cost/ (URL is unknown to Google)</p>
+                <p class="because">Search Console reports 4 live URL(s) not indexed — /about/ (URL is unknown to Google); /blog/ (Discovered - currently not indexed); /services/ (Discovered - currently not indexed); /website-hosting-cost/ (URL is unknown to Google)</p>
                 
                 </td>
               <td class="n">240</td>
