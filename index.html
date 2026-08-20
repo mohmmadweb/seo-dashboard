@@ -97,58 +97,6 @@ section.block > h2{font-size:15px;letter-spacing:.13em;text-transform:uppercase;
   padding-bottom:8px;border-bottom:1px solid var(--line)}
 
 /* pace track ----------------------------------------------------------- */
-/* run strip — freshness, collectors, what changed --------------------- */
-.runstrip{background:var(--panel);border:1px solid var(--line);
-  border-left:3px solid var(--good);border-radius:var(--radius-lg);
-  padding:15px 18px;box-shadow:var(--shadow);margin-bottom:16px}
-.runstrip.is-stale{border-left-color:var(--warn)}
-.runstrip.is-dead{border-left-color:var(--danger)}
-.run-line{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:14px}
-.run-dot{width:9px;height:9px;border-radius:50%;background:var(--good);flex:none;
-  box-shadow:0 0 0 3px color-mix(in srgb,var(--good) 22%,transparent)}
-.runstrip.is-stale .run-dot{background:var(--warn);
-  box-shadow:0 0 0 3px color-mix(in srgb,var(--warn) 22%,transparent)}
-.runstrip.is-dead .run-dot{background:var(--danger);
-  box-shadow:0 0 0 3px color-mix(in srgb,var(--danger) 22%,transparent)}
-@media (prefers-reduced-motion:no-preference){
-  .runstrip:not(.is-stale):not(.is-dead) .run-dot{animation:runpulse 2.6s ease-in-out infinite}
-}
-@keyframes runpulse{
-  0%,100%{box-shadow:0 0 0 3px color-mix(in srgb,var(--good) 22%,transparent)}
-  50%{box-shadow:0 0 0 6px color-mix(in srgb,var(--good) 8%,transparent)}
-}
-.run-when{font-variant-numeric:tabular-nums}
-.run-age{color:var(--muted);font-size:13px}
-.runstrip.is-stale .run-age,.runstrip.is-dead .run-age{color:var(--warn);font-weight:600}
-.runstrip.is-dead .run-age{color:var(--danger)}
-.run-gap{font-size:12px;color:var(--warn);border:1px solid
-  color-mix(in srgb,var(--warn) 32%,transparent);border-radius:6px;padding:1px 7px}
-.run-chips{display:flex;gap:7px;flex-wrap:wrap;margin:11px 0 9px}
-.run-chip{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;
-  padding:3px 9px;border-radius:6px;background:var(--panel-2);
-  border:1px solid var(--line);color:var(--ink-2);white-space:nowrap}
-.run-chip i{width:6px;height:6px;border-radius:50%;background:currentColor;flex:none}
-.run-chip.tone-good{color:var(--good)}
-.run-chip.tone-danger{color:var(--danger)}
-.run-chip.tone-muted{color:var(--muted)}
-.run-foot{font-size:12.5px;color:var(--muted)}
-.run-foot a{color:var(--gold-deep);text-decoration:none;border-bottom:1px solid
-  color-mix(in srgb,var(--gold) 40%,transparent)}
-.run-foot a:hover,.run-foot a:focus-visible{color:var(--ink)}
-
-/* activity feed -------------------------------------------------------- */
-.feed{list-style:none;padding:0;margin:0;display:grid;gap:1px;
-  background:var(--line);border:1px solid var(--line);border-radius:var(--radius);
-  overflow:hidden}
-.feed-row{display:flex;align-items:baseline;gap:11px;padding:9px 13px;
-  background:var(--panel);font-size:13.5px}
-.feed-time{color:var(--muted);font-size:12px;flex:none;
-  font-variant-numeric:tabular-nums}
-.feed-msg{color:var(--ink-2);min-width:0;overflow-wrap:anywhere}
-@media (max-width:620px){
-  .feed-row{flex-wrap:wrap;gap:6px}
-}
-
 .track{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-lg);
   padding:18px 20px;box-shadow:var(--shadow);margin-bottom:26px}
 .track-head{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
@@ -331,15 +279,15 @@ ul.gaps li{margin:3px 0}
     <div class="sub">Data through 2026-08-20 · San Diego, CA ·
       Goal 2026-10-14</div>
     <div class="verdict">
-      <span class="big danger">1 AT RISK</span>
-      <span class="meta">65.2% of plan · 4 KPIs measured ·
-        8 awaiting credentials · 55 days left</span>
+      <span class="big danger">4 AT RISK</span>
+      <span class="meta">44.0% of plan · 10 KPIs measured ·
+        2 awaiting credentials · 55 days left</span>
     </div>
     
     <div class="freshness">
-      <span class="pill pill-good" data-fresh-pill>ran today</span>
-      <span class="fresh-meta">last change to the site: <b>index_submit</b> on <b>changed urls</b>, 2026-08-18</span>
-      <span class="strip" aria-label="runs over the last 14 days"><i class="tick on" title="2026-08-07"></i><i class="tick on" title="2026-08-08"></i><i class="tick on" title="2026-08-09"></i><i class="tick on" title="2026-08-10"></i><i class="tick off" title="2026-08-11"></i><i class="tick off" title="2026-08-12"></i><i class="tick off" title="2026-08-13"></i><i class="tick off" title="2026-08-14"></i><i class="tick off" title="2026-08-15"></i><i class="tick off" title="2026-08-16"></i><i class="tick on" title="2026-08-17"></i><i class="tick on" title="2026-08-18"></i><i class="tick on" title="2026-08-19"></i><i class="tick on" title="2026-08-20"></i></span>
+      <span class="pill pill-good">ran today</span>
+      <span class="fresh-meta">last change to the site: <b>content_brief</b> on <b>How much does a Wix website cost?</b>, 2026-08-10</span>
+      <span class="strip" aria-label="runs over the last 14 days"><i class="tick on" title="2026-08-07"></i><i class="tick on" title="2026-08-08"></i><i class="tick on" title="2026-08-09"></i><i class="tick on" title="2026-08-10"></i><i class="tick on" title="2026-08-11"></i><i class="tick on" title="2026-08-12"></i><i class="tick on" title="2026-08-13"></i><i class="tick on" title="2026-08-14"></i><i class="tick on" title="2026-08-15"></i><i class="tick on" title="2026-08-16"></i><i class="tick on" title="2026-08-17"></i><i class="tick on" title="2026-08-18"></i><i class="tick on" title="2026-08-19"></i><i class="tick on" title="2026-08-20"></i></span>
     </div>
     <nav class="tabs" role="tablist" aria-label="Sections">
       <button role="tab" aria-selected="true"  data-tab="dash">Dashboard</button>
@@ -359,26 +307,13 @@ ul.gaps li{margin:3px 0}
 
 <div class="panel" id="dash" data-active role="tabpanel">
   
-    <section class="runstrip" data-generated="2026-08-20" aria-label="Automation status">
-      <div class="run-line">
-        <span class="run-dot" aria-hidden="true"></span>
-        <b class="run-when">Last run 2026-08-20 · 09:15 UTC</b>
-        <span class="run-age" data-age-slot>today</span>
-        <span class="run-gap" title="2026-08-11, 2026-08-12, 2026-08-13, 2026-08-14, 2026-08-15, 2026-08-16">6 days never recorded (2026-08-11 to 2026-08-16)</span>
-      </div>
-      <div class="run-chips"><span class="run-chip tone-good" title="technical_health">Crawl<i></i>ok</span><span class="run-chip tone-danger" title="gsc">Search Console<i></i>blocked</span><span class="run-chip tone-good" title="ga4">GA4<i></i>ok</span><span class="run-chip tone-danger" title="psi">PageSpeed<i></i>blocked</span><span class="run-chip tone-danger" title="ranking_keywords">Positions<i></i>blocked</span><span class="run-chip tone-danger" title="referring_domains">Referring domains<i></i>blocked</span></div>
-      <div class="run-foot">no changes made · 4 proposals raised ·
-        <a href="#" data-goto="actions">see the actions</a> ·
-        <a href="#" data-goto="log">full log</a></div>
-    </section>
-  
     <section class="track" aria-label="Plan pace">
       <div class="track-head">
         <span class="track-label">Pace</span>
-        <span class="track-verdict tone-good">Progress 65.2% vs 40.2% of the window elapsed — ahead of the clock</span>
+        <span class="track-verdict tone-good">Progress 44.0% vs 40.2% of the window elapsed — ahead of the clock</span>
       </div>
       <div class="track-rail">
-        <i class="track-progress tone-good" style="width:65.2%"></i>
+        <i class="track-progress tone-good" style="width:44.0%"></i>
         <i class="track-now" style="left:40.2%" title="Today"></i>
       </div>
       <div class="track-scale">
@@ -402,7 +337,7 @@ ul.gaps li{margin:3px 0}
       <div class="bar"><i class="fill tone-good" style="width:100%"></i></div>
       <div class="kpi-pace good">Target met — 29 vs 20 goal</div>
       <footer>
-        <svg class="spark" viewBox="0 0 132 30" role="img" aria-label="trend, 12 readings, latest 29"><polygon points="0,30 0.0,27.0 12.0,27.0 24.0,27.0 36.0,22.2 48.0,17.4 60.0,17.4 72.0,12.6 84.0,12.6 96.0,12.6 108.0,3.0 120.0,3.0 132.0,3.0 132,30" class="spark-area"/><polyline points="0.0,27.0 12.0,27.0 24.0,27.0 36.0,22.2 48.0,17.4 60.0,17.4 72.0,12.6 84.0,12.6 96.0,12.6 108.0,3.0 120.0,3.0 132.0,3.0" class="spark-line"/><circle cx="132.0" cy="3.0" r="2.6" class="spark-dot"/></svg>
+        <svg class="spark" viewBox="0 0 132 30" role="img" aria-label="trend, 18 readings, latest 29"><polygon points="0,30 0.0,7.1 7.8,7.1 15.5,7.1 23.3,6.3 31.1,5.5 38.8,5.5 46.6,4.7 54.4,4.7 62.1,4.7 69.9,4.7 77.6,27.0 85.4,27.0 93.2,4.7 100.9,4.7 108.7,4.7 116.5,4.7 124.2,3.0 132.0,3.0 132,30" class="spark-area"/><polyline points="0.0,7.1 7.8,7.1 15.5,7.1 23.3,6.3 31.1,5.5 38.8,5.5 46.6,4.7 54.4,4.7 62.1,4.7 69.9,4.7 77.6,27.0 85.4,27.0 93.2,4.7 100.9,4.7 108.7,4.7 116.5,4.7 124.2,3.0 132.0,3.0" class="spark-line"/><circle cx="132.0" cy="3.0" r="2.6" class="spark-dot"/></svg>
         <span class="src">crawl</span>
       </footer>
       <p class="kpi-note">Target already met (21). Watch for regressions, not growth.</p>
@@ -419,109 +354,109 @@ ul.gaps li{margin:3px 0}
       <div class="bar"><i class="fill tone-good" style="width:100%"></i></div>
       <div class="kpi-pace good">Target met — 100 vs 100 goal</div>
       <footer>
-        <svg class="spark" viewBox="0 0 132 30" role="img" aria-label="trend, 12 readings, latest 100"><polygon points="0,30 0.0,27.0 12.0,27.0 24.0,27.0 36.0,27.0 48.0,27.0 60.0,27.0 72.0,27.0 84.0,27.0 96.0,27.0 108.0,27.0 120.0,27.0 132.0,27.0 132,30" class="spark-area"/><polyline points="0.0,27.0 12.0,27.0 24.0,27.0 36.0,27.0 48.0,27.0 60.0,27.0 72.0,27.0 84.0,27.0 96.0,27.0 108.0,27.0 120.0,27.0 132.0,27.0" class="spark-line"/><circle cx="132.0" cy="27.0" r="2.6" class="spark-dot"/></svg>
+        <svg class="spark" viewBox="0 0 132 30" role="img" aria-label="trend, 18 readings, latest 100"><polygon points="0,30 0.0,3.0 7.8,3.0 15.5,3.0 23.3,3.0 31.1,3.0 38.8,3.0 46.6,3.0 54.4,3.0 62.1,3.0 69.9,3.0 77.6,27.0 85.4,27.0 93.2,3.0 100.9,3.0 108.7,3.0 116.5,3.0 124.2,3.0 132.0,3.0 132,30" class="spark-area"/><polyline points="0.0,3.0 7.8,3.0 15.5,3.0 23.3,3.0 31.1,3.0 38.8,3.0 46.6,3.0 54.4,3.0 62.1,3.0 69.9,3.0 77.6,27.0 85.4,27.0 93.2,3.0 100.9,3.0 108.7,3.0 116.5,3.0 124.2,3.0 132.0,3.0" class="spark-line"/><circle cx="132.0" cy="3.0" r="2.6" class="spark-dot"/></svg>
         <span class="src">crawl</span>
       </footer>
       <p class="kpi-note">Composite of the technical checks below. 100 = every live URL clean.</p>
     </article>
-    <article class="kpi tone-muted">
+    <article class="kpi tone-danger">
       <header>
         <h3>Mobile performance (PSI)</h3>
-        <span class="pill pill-muted">Blocked</span>
+        <span class="pill pill-danger">At risk</span>
       </header>
       <div class="kpi-figure">
-        <strong>—</strong>
+        <strong>47</strong>
         <span class="kpi-target">of 70 score</span>
       </div>
-      <div class="bar bar-blocked" role="presentation"></div>
-      <div class="kpi-pace muted">Not measured — non-JSON response</div>
+      <div class="bar"><i class="fill tone-danger" style="width:0%"></i></div>
+      <div class="kpi-pace danger"><b>-0.324</b>/day actual vs <b>0.418</b>/day needed<span class="proj"> · projects to 29.2</span></div>
       <footer>
-        <svg class="spark" viewBox="0 0 132 30" role="img" aria-label="trend, 8 readings, latest 69"><polygon points="0,30 0.0,18.2 18.9,27.0 37.7,18.2 56.6,16.9 75.4,18.2 94.3,5.5 113.1,3.0 132.0,5.5 132,30" class="spark-area"/><polyline points="0.0,18.2 18.9,27.0 37.7,18.2 56.6,16.9 75.4,18.2 94.3,5.5 113.1,3.0 132.0,5.5" class="spark-line"/><circle cx="132.0" cy="5.5" r="2.6" class="spark-dot"/></svg>
+        <svg class="spark" viewBox="0 0 132 30" role="img" aria-label="trend, 14 readings, latest 47"><polygon points="0,30 0.0,4.8 10.2,17.8 20.3,4.8 30.5,3.0 40.6,4.8 50.8,3.0 60.9,4.8 71.1,4.8 81.2,3.0 91.4,3.0 101.5,3.0 111.7,3.0 121.8,3.0 132.0,27.0 132,30" class="spark-area"/><polyline points="0.0,4.8 10.2,17.8 20.3,4.8 30.5,3.0 40.6,4.8 50.8,3.0 60.9,4.8 71.1,4.8 81.2,3.0 91.4,3.0 101.5,3.0 111.7,3.0 121.8,3.0 132.0,27.0" class="spark-line"/><circle cx="132.0" cy="27.0" r="2.6" class="spark-dot"/></svg>
         <span class="src">psi</span>
       </footer>
       <p class="kpi-note">Payload-capped at ~60. Needs QUIC.cloud WebP run — host/client action.</p>
     </article>
-    <article class="kpi tone-muted">
+    <article class="kpi tone-good">
       <header>
         <h3>Impressions (28d)</h3>
-        <span class="pill pill-muted">Blocked</span>
+        <span class="pill pill-good">On track</span>
       </header>
       <div class="kpi-figure">
-        <strong>—</strong>
+        <strong>892</strong>
         <span class="kpi-target">of 2,000 impressions</span>
       </div>
-      <div class="bar bar-blocked" role="presentation"></div>
-      <div class="kpi-pace muted">Not measured — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmaste</div>
+      <div class="bar"><i class="fill tone-good" style="width:45%"></i></div>
+      <div class="kpi-pace good"><b>24.108</b>/day actual vs <b>20.145</b>/day needed<span class="proj"> · projects to 2217.9</span></div>
       <footer>
-        <svg class="spark" viewBox="0 0 132 30" role="img" aria-label="trend, 9 readings, latest 681"><polygon points="0,30 0.0,27.0 16.5,26.5 33.0,26.5 49.5,26.4 66.0,26.2 82.5,25.6 99.0,24.7 115.5,24.0 132.0,3.0 132,30" class="spark-area"/><polyline points="0.0,27.0 16.5,26.5 33.0,26.5 49.5,26.4 66.0,26.2 82.5,25.6 99.0,24.7 115.5,24.0 132.0,3.0" class="spark-line"/><circle cx="132.0" cy="3.0" r="2.6" class="spark-dot"/></svg>
+        <svg class="spark" viewBox="0 0 132 30" role="img" aria-label="trend, 16 readings, latest 892"><polygon points="0,30 0.0,27.0 8.8,26.6 17.6,26.6 26.4,26.6 35.2,26.4 44.0,26.0 52.8,25.4 61.6,24.8 70.4,24.1 79.2,23.2 88.0,14.6 96.8,14.6 105.6,11.9 114.4,9.9 123.2,5.9 132.0,3.0 132,30" class="spark-area"/><polyline points="0.0,27.0 8.8,26.6 17.6,26.6 26.4,26.6 35.2,26.4 44.0,26.0 52.8,25.4 61.6,24.8 70.4,24.1 79.2,23.2 88.0,14.6 96.8,14.6 105.6,11.9 114.4,9.9 123.2,5.9 132.0,3.0" class="spark-line"/><circle cx="132.0" cy="3.0" r="2.6" class="spark-dot"/></svg>
         <span class="src">gsc</span>
       </footer>
       
     </article>
-    <article class="kpi tone-muted">
+    <article class="kpi tone-danger">
       <header>
         <h3>Clicks (28d)</h3>
-        <span class="pill pill-muted">Blocked</span>
+        <span class="pill pill-danger">At risk</span>
       </header>
       <div class="kpi-figure">
-        <strong>—</strong>
+        <strong>9</strong>
         <span class="kpi-target">of 120 clicks</span>
       </div>
-      <div class="bar bar-blocked" role="presentation"></div>
-      <div class="kpi-pace muted">Not measured — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmaste</div>
+      <div class="bar"><i class="fill tone-danger" style="width:8%"></i></div>
+      <div class="kpi-pace danger"><b>0.243</b>/day actual vs <b>2.018</b>/day needed<span class="proj"> · projects to 22.4</span></div>
       <footer>
-        <svg class="spark" viewBox="0 0 132 30" role="img" aria-label="trend, 9 readings, latest 11"><polygon points="0,30 0.0,27.0 16.5,27.0 33.0,27.0 49.5,27.0 66.0,27.0 82.5,27.0 99.0,3.0 115.5,3.0 132.0,27.0 132,30" class="spark-area"/><polyline points="0.0,27.0 16.5,27.0 33.0,27.0 49.5,27.0 66.0,27.0 82.5,27.0 99.0,3.0 115.5,3.0 132.0,27.0" class="spark-line"/><circle cx="132.0" cy="27.0" r="2.6" class="spark-dot"/></svg>
+        <svg class="spark" viewBox="0 0 132 30" role="img" aria-label="trend, 16 readings, latest 9"><polygon points="0,30 0.0,17.4 8.8,17.4 17.6,17.4 26.4,17.4 35.2,17.4 44.0,17.4 52.8,12.6 61.6,12.6 70.4,12.6 79.2,12.6 88.0,3.0 96.8,3.0 105.6,17.4 114.4,17.4 123.2,17.4 132.0,27.0 132,30" class="spark-area"/><polyline points="0.0,17.4 8.8,17.4 17.6,17.4 26.4,17.4 35.2,17.4 44.0,17.4 52.8,12.6 61.6,12.6 70.4,12.6 79.2,12.6 88.0,3.0 96.8,3.0 105.6,17.4 114.4,17.4 123.2,17.4 132.0,27.0" class="spark-line"/><circle cx="132.0" cy="27.0" r="2.6" class="spark-dot"/></svg>
         <span class="src">gsc</span>
       </footer>
       
     </article>
-    <article class="kpi tone-muted">
+    <article class="kpi tone-good">
       <header>
         <h3>Named non-brand queries</h3>
-        <span class="pill pill-muted">Blocked</span>
+        <span class="pill pill-good">Met</span>
       </header>
       <div class="kpi-figure">
-        <strong>—</strong>
+        <strong>150</strong>
         <span class="kpi-target">of 25 queries</span>
       </div>
-      <div class="bar bar-blocked" role="presentation"></div>
-      <div class="kpi-pace muted">Not measured — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmaste</div>
+      <div class="bar"><i class="fill tone-good" style="width:100%"></i></div>
+      <div class="kpi-pace good">Target met — 150 vs 25 goal</div>
       <footer>
-        <svg class="spark" viewBox="0 0 132 30" role="img" aria-label="trend, 9 readings, latest 121"><polygon points="0,30 0.0,27.0 16.5,26.8 33.0,26.8 49.5,26.6 66.0,26.6 82.5,25.7 99.0,24.5 115.5,23.4 132.0,3.0 132,30" class="spark-area"/><polyline points="0.0,27.0 16.5,26.8 33.0,26.8 49.5,26.6 66.0,26.6 82.5,25.7 99.0,24.5 115.5,23.4 132.0,3.0" class="spark-line"/><circle cx="132.0" cy="3.0" r="2.6" class="spark-dot"/></svg>
+        <svg class="spark" viewBox="0 0 132 30" role="img" aria-label="trend, 16 readings, latest 150"><polygon points="0,30 0.0,27.0 8.8,26.8 17.6,26.8 26.4,26.7 35.2,26.7 44.0,26.0 52.8,25.0 61.6,24.1 70.4,24.1 79.2,23.5 88.0,13.0 96.8,13.0 105.6,9.6 114.4,7.9 123.2,5.2 132.0,3.0 132,30" class="spark-area"/><polyline points="0.0,27.0 8.8,26.8 17.6,26.8 26.4,26.7 35.2,26.7 44.0,26.0 52.8,25.0 61.6,24.1 70.4,24.1 79.2,23.5 88.0,13.0 96.8,13.0 105.6,9.6 114.4,7.9 123.2,5.2 132.0,3.0" class="spark-line"/><circle cx="132.0" cy="3.0" r="2.6" class="spark-dot"/></svg>
         <span class="src">gsc</span>
       </footer>
       <p class="kpi-note">The leading indicator. First one landed 2026-07-30.</p>
     </article>
-    <article class="kpi tone-muted">
+    <article class="kpi tone-warn">
       <header>
         <h3>Ranking keywords (any position)</h3>
-        <span class="pill pill-muted">Blocked</span>
+        <span class="pill pill-warn">Behind</span>
       </header>
       <div class="kpi-figure">
-        <strong>—</strong>
+        <strong>11</strong>
         <span class="kpi-target">of 40 keywords</span>
       </div>
-      <div class="bar bar-blocked" role="presentation"></div>
-      <div class="kpi-pace muted">Not measured — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmaste</div>
+      <div class="bar"><i class="fill tone-warn" style="width:28%"></i></div>
+      <div class="kpi-pace warn"><b>0.297</b>/day actual vs <b>0.527</b>/day needed<span class="proj"> · projects to 27.3</span></div>
       <footer>
-        <svg class="spark" viewBox="0 0 132 30" role="img" aria-label="trend, 8 readings, latest 11"><polygon points="0,30 0.0,27.0 18.9,27.0 37.7,27.0 56.6,27.0 75.4,27.0 94.3,24.6 113.1,19.8 132.0,3.0 132,30" class="spark-area"/><polyline points="0.0,27.0 18.9,27.0 37.7,27.0 56.6,27.0 75.4,27.0 94.3,24.6 113.1,19.8 132.0,3.0" class="spark-line"/><circle cx="132.0" cy="3.0" r="2.6" class="spark-dot"/></svg>
+        <svg class="spark" viewBox="0 0 132 30" role="img" aria-label="trend, 15 readings, latest 11"><polygon points="0,30 0.0,27.0 9.4,27.0 18.9,27.0 28.3,27.0 37.7,27.0 47.1,24.6 56.6,19.8 66.0,19.8 75.4,15.0 84.9,7.8 94.3,7.8 103.7,5.4 113.1,3.0 122.6,3.0 132.0,3.0 132,30" class="spark-area"/><polyline points="0.0,27.0 9.4,27.0 18.9,27.0 28.3,27.0 37.7,27.0 47.1,24.6 56.6,19.8 66.0,19.8 75.4,15.0 84.9,7.8 94.3,7.8 103.7,5.4 113.1,3.0 122.6,3.0 132.0,3.0" class="spark-line"/><circle cx="132.0" cy="3.0" r="2.6" class="spark-dot"/></svg>
         <span class="src">dataforseo</span>
       </footer>
       
     </article>
-    <article class="kpi tone-muted">
+    <article class="kpi tone-danger">
       <header>
         <h3>Money keywords in top 10</h3>
-        <span class="pill pill-muted">Blocked</span>
+        <span class="pill pill-danger">At risk</span>
       </header>
       <div class="kpi-figure">
-        <strong>—</strong>
+        <strong>0</strong>
         <span class="kpi-target">of 2 keywords</span>
       </div>
-      <div class="bar bar-blocked" role="presentation"></div>
-      <div class="kpi-pace muted">Not measured — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmaste</div>
+      <div class="bar"><i class="fill tone-danger" style="width:0%"></i></div>
+      <div class="kpi-pace danger"><b>0</b>/day actual vs <b>0.036</b>/day needed<span class="proj"> · projects to 0</span></div>
       <footer>
-        <svg class="spark" viewBox="0 0 132 30" role="img" aria-label="trend, 8 readings, latest 0"><polygon points="0,30 0.0,27.0 18.9,27.0 37.7,27.0 56.6,27.0 75.4,27.0 94.3,27.0 113.1,27.0 132.0,27.0 132,30" class="spark-area"/><polyline points="0.0,27.0 18.9,27.0 37.7,27.0 56.6,27.0 75.4,27.0 94.3,27.0 113.1,27.0 132.0,27.0" class="spark-line"/><circle cx="132.0" cy="27.0" r="2.6" class="spark-dot"/></svg>
+        <svg class="spark" viewBox="0 0 132 30" role="img" aria-label="trend, 15 readings, latest 0"><polygon points="0,30 0.0,27.0 9.4,27.0 18.9,27.0 28.3,27.0 37.7,27.0 47.1,27.0 56.6,27.0 66.0,27.0 75.4,27.0 84.9,27.0 94.3,27.0 103.7,27.0 113.1,27.0 122.6,27.0 132.0,27.0 132,30" class="spark-area"/><polyline points="0.0,27.0 9.4,27.0 18.9,27.0 28.3,27.0 37.7,27.0 47.1,27.0 56.6,27.0 66.0,27.0 75.4,27.0 84.9,27.0 94.3,27.0 103.7,27.0 113.1,27.0 122.6,27.0 132.0,27.0" class="spark-line"/><circle cx="132.0" cy="27.0" r="2.6" class="spark-dot"/></svg>
         <span class="src">dataforseo</span>
       </footer>
       
@@ -538,7 +473,7 @@ ul.gaps li{margin:3px 0}
       <div class="bar"><i class="fill tone-danger" style="width:19%"></i></div>
       <div class="kpi-pace danger"><b>0.514</b>/day actual vs <b>1.473</b>/day needed<span class="proj"> · projects to 47.3</span></div>
       <footer>
-        <svg class="spark" viewBox="0 0 132 30" role="img" aria-label="trend, 11 readings, latest 19"><polygon points="0,30 0.0,20.1 13.2,20.1 26.4,20.1 39.6,20.1 52.8,13.3 66.0,13.3 79.2,13.3 92.4,13.3 105.6,3.0 118.8,13.3 132.0,27.0 132,30" class="spark-area"/><polyline points="0.0,20.1 13.2,20.1 26.4,20.1 39.6,20.1 52.8,13.3 66.0,13.3 79.2,13.3 92.4,13.3 105.6,3.0 118.8,13.3 132.0,27.0" class="spark-line"/><circle cx="132.0" cy="27.0" r="2.6" class="spark-dot"/></svg>
+        <svg class="spark" viewBox="0 0 132 30" role="img" aria-label="trend, 16 readings, latest 19"><polygon points="0,30 0.0,21.7 8.8,21.7 17.6,21.7 26.4,21.7 35.2,16.3 44.0,16.3 52.8,16.3 61.6,16.3 70.4,13.7 79.2,3.0 88.0,8.3 96.8,8.3 105.6,8.3 114.4,11.0 123.2,16.3 132.0,27.0 132,30" class="spark-area"/><polyline points="0.0,21.7 8.8,21.7 17.6,21.7 26.4,21.7 35.2,16.3 44.0,16.3 52.8,16.3 61.6,16.3 70.4,13.7 79.2,3.0 88.0,8.3 96.8,8.3 105.6,8.3 114.4,11.0 123.2,16.3 132.0,27.0" class="spark-line"/><circle cx="132.0" cy="27.0" r="2.6" class="spark-dot"/></svg>
         <span class="src">ga4</span>
       </footer>
       
@@ -589,26 +524,15 @@ ul.gaps li{margin:3px 0}
       <div class="bar"><i class="fill tone-good" style="width:42%"></i></div>
       <div class="kpi-pace good"><b>0.27</b>/day actual vs <b>0.255</b>/day needed<span class="proj"> · projects to 24.9</span></div>
       <footer>
-        <svg class="spark" viewBox="0 0 132 30" role="img" aria-label="trend, 12 readings, latest 10"><polygon points="0,30 0.0,27.0 12.0,27.0 24.0,27.0 36.0,22.2 48.0,17.4 60.0,17.4 72.0,12.6 84.0,12.6 96.0,12.6 108.0,3.0 120.0,3.0 132.0,3.0 132,30" class="spark-area"/><polyline points="0.0,27.0 12.0,27.0 24.0,27.0 36.0,22.2 48.0,17.4 60.0,17.4 72.0,12.6 84.0,12.6 96.0,12.6 108.0,3.0 120.0,3.0 132.0,3.0" class="spark-line"/><circle cx="132.0" cy="3.0" r="2.6" class="spark-dot"/></svg>
+        <svg class="spark" viewBox="0 0 132 30" role="img" aria-label="trend, 18 readings, latest 10"><polygon points="0,30 0.0,15.0 7.8,15.0 15.5,15.0 23.3,12.6 31.1,10.2 38.8,10.2 46.6,7.8 54.4,7.8 62.1,7.8 69.9,7.8 77.6,27.0 85.4,27.0 93.2,7.8 100.9,7.8 108.7,7.8 116.5,7.8 124.2,3.0 132.0,3.0 132,30" class="spark-area"/><polyline points="0.0,15.0 7.8,15.0 15.5,15.0 23.3,12.6 31.1,10.2 38.8,10.2 46.6,7.8 54.4,7.8 62.1,7.8 69.9,7.8 77.6,27.0 85.4,27.0 93.2,7.8 100.9,7.8 108.7,7.8 116.5,7.8 124.2,3.0 132.0,3.0" class="spark-line"/><circle cx="132.0" cy="3.0" r="2.6" class="spark-dot"/></svg>
         <span class="src">crawl</span>
       </footer>
       <p class="kpi-note">Cadence 2/week from 2026-07-22.</p>
     </article></div>
   </section>
   <section class="block">
-    <h2>Live activity — what the automation did</h2>
-    <p class="lead">Newest first, across the last runs. Every line is written by the
-      run itself, so an empty or old feed means the schedule stopped rather than that
-      there was nothing to do.</p>
-    <ul class="feed"><li class="feed-row"><span class="feed-time mono">08-20 09:15</span><span class="chip chip-muted">backlinks</span><span class="feed-msg">not yet populated — 0 raw links</span></li><li class="feed-row"><span class="feed-time mono">08-20 09:15</span><span class="chip chip-muted">ga4</span><span class="feed-msg">19 organic sessions (28d)</span></li><li class="feed-row"><span class="feed-time mono">08-20 09:15</span><span class="chip chip-danger">positions</span><span class="feed-msg">BLOCKED — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</span></li><li class="feed-row"><span class="feed-time mono">08-20 09:15</span><span class="chip chip-danger">gsc</span><span class="feed-msg">BLOCKED — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</span></li><li class="feed-row"><span class="feed-time mono">08-20 09:15</span><span class="chip chip-muted">crawl</span><span class="feed-msg">Technical health 100.0% · 29/29 URLs live · 0 check failures</span></li><li class="feed-row"><span class="feed-time mono">08-20 09:15</span><span class="chip chip-muted">crawl</span><span class="feed-msg">Discovered 29 URLs in the sitemap</span></li><li class="feed-row"><span class="feed-time mono">08-20 09:15</span><span class="chip chip-warn">catchup</span><span class="feed-msg">declined to backfill 5 day(s): Search Console is unreachable here (HttpError). Crawl-only backfill states today&#x27;s measurements under past dates rather than recovering anything.</span></li><li class="feed-row"><span class="feed-time mono">08-19 09:15</span><span class="chip chip-muted">backlinks</span><span class="feed-msg">not yet populated — 0 raw links</span></li><li class="feed-row"><span class="feed-time mono">08-19 09:15</span><span class="chip chip-muted">ga4</span><span class="feed-msg">23 organic sessions (28d)</span></li><li class="feed-row"><span class="feed-time mono">08-19 09:15</span><span class="chip chip-danger">positions</span><span class="feed-msg">BLOCKED — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</span></li><li class="feed-row"><span class="feed-time mono">08-19 09:15</span><span class="chip chip-muted">crawl</span><span class="feed-msg">Technical health 100.0% · 29/29 URLs live · 0 check failures</span></li><li class="feed-row"><span class="feed-time mono">08-19 09:15</span><span class="chip chip-danger">gsc</span><span class="feed-msg">BLOCKED — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</span></li><li class="feed-row"><span class="feed-time mono">08-19 09:15</span><span class="chip chip-muted">crawl</span><span class="feed-msg">Discovered 29 URLs in the sitemap</span></li><li class="feed-row"><span class="feed-time mono">08-19 09:15</span><span class="chip chip-warn">catchup</span><span class="feed-msg">declined to backfill 6 day(s): Search Console is unreachable here (HttpError). Crawl-only backfill states today&#x27;s measurements under past dates rather than recovering anything.</span></li></ul>
-  </section>
-  <section class="block">
-    <h2>Today’s work — 3 for me,
-        13 for someone else</h2>
+    <h2>Today’s work — 7 for me,
+        8 for someone else</h2>
     <p class="lead">Every row exists because a measurement put it there. The “why” under
       each task is the evidence that generated it.</p>
     
@@ -617,9 +541,39 @@ ul.gaps li{margin:3px 0}
       <tbody>
         <tr>
           <td><span class="chip chip-danger">blocker</span></td>
+          <td class="t-title"><b>Google API credentials missing</b><p class="because">Declared blocker (critical) — blocks gsc_impressions, gsc_clicks, nonbrand_queries, organic_sessions, cwv_perf</p><details><summary>detail</summary><pre>Tier -1. Needs service_account.json + api_key. SA also 403s — re-add as GSC Owner.</pre></details></td>
+          <td><span class="muted">—</span></td>
+          <td><span class="owner owner-account owner">account owner</span></td>
+        </tr>
+        <tr>
+          <td><span class="chip chip-danger">blocker</span></td>
+          <td class="t-title"><b>WordPress app password missing</b><p class="because">Declared blocker (critical) — blocks all_site_edits</p><details><summary>detail</summary><pre>wp-json/mcp/novamira returns 401 — site is read-only, no fixes can be shipped.</pre></details></td>
+          <td><span class="muted">—</span></td>
+          <td><span class="owner owner-account owner">account owner</span></td>
+        </tr>
+        <tr>
+          <td><span class="chip chip-danger">blocker</span></td>
           <td class="t-title"><b>Google Business Profile not verified</b><p class="because">Declared blocker (critical) — blocks local_pack, reviews</p><details><summary>detail</summary><pre>Video verification pending, needs the San Diego partner to film it.</pre></details></td>
           <td><span class="muted">—</span></td>
           <td><span class="owner owner-client">Client</span></td>
+        </tr>
+        <tr>
+          <td><span class="chip chip-warn">kpi</span></td>
+          <td class="t-title"><b>Re-measure Core Web Vitals and find the payload win (Mobile performance (PSI))</b><p class="because">Mobile performance (PSI) is at risk: 47 → 70 score, needs 0.418/day and is running at -0.324/day</p></td>
+          <td><code class="agent">seo-performance</code></td>
+          <td><span class="owner owner-claude">Me</span></td>
+        </tr>
+        <tr>
+          <td><span class="chip chip-warn">kpi</span></td>
+          <td class="t-title"><b>Pull the GSC query report (Clicks (28d))</b><p class="because">Clicks (28d) is at risk: 9 → 120 clicks, needs 2.018/day and is running at 0.243/day</p></td>
+          <td><code class="agent">seo-google</code></td>
+          <td><span class="owner owner-claude">Me</span></td>
+        </tr>
+        <tr>
+          <td><span class="chip chip-warn">kpi</span></td>
+          <td class="t-title"><b>Strengthen the cluster around the money terms (Money keywords in top 10)</b><p class="because">Money keywords in top 10 is at risk: 0 → 2 keywords, needs 0.036/day and is running at 0.0/day</p></td>
+          <td><code class="agent">seo-cluster</code></td>
+          <td><span class="owner owner-claude">Me</span></td>
         </tr>
         <tr>
           <td><span class="chip chip-warn">kpi</span></td>
@@ -640,45 +594,10 @@ ul.gaps li{margin:3px 0}
           <td><span class="owner owner-client">Client</span></td>
         </tr>
         <tr>
-          <td><span class="chip chip-danger">blocked</span></td>
-          <td class="t-title"><b>Unblock Mobile performance (PSI)</b><p class="because">Collector reported: non-JSON response</p></td>
-          <td><code class="agent">seo-performance</code></td>
-          <td><span class="owner owner-owner">Account owner</span></td>
-        </tr>
-        <tr>
-          <td><span class="chip chip-danger">blocked</span></td>
-          <td class="t-title"><b>Unblock Impressions (28d)</b><p class="because">Collector reported: HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</p></td>
-          <td><code class="agent">seo-google</code></td>
-          <td><span class="owner owner-owner">Account owner</span></td>
-        </tr>
-        <tr>
-          <td><span class="chip chip-danger">blocked</span></td>
-          <td class="t-title"><b>Unblock Clicks (28d)</b><p class="because">Collector reported: HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</p></td>
-          <td><code class="agent">seo-google</code></td>
-          <td><span class="owner owner-owner">Account owner</span></td>
-        </tr>
-        <tr>
-          <td><span class="chip chip-danger">blocked</span></td>
-          <td class="t-title"><b>Unblock Named non-brand queries</b><p class="because">Collector reported: HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</p></td>
-          <td><code class="agent">seo-google</code></td>
-          <td><span class="owner owner-owner">Account owner</span></td>
-        </tr>
-        <tr>
-          <td><span class="chip chip-danger">blocked</span></td>
-          <td class="t-title"><b>Unblock Ranking keywords (any position)</b><p class="because">Collector reported: HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</p></td>
+          <td><span class="chip chip-warn">kpi</span></td>
+          <td class="t-title"><b>Check live SERP positions for the target set (Ranking keywords (any position))</b><p class="because">Ranking keywords (any position) is behind: 11 → 40 keywords, needs 0.527/day and is running at 0.297/day</p></td>
           <td><code class="agent">seo-dataforseo</code></td>
-          <td><span class="owner owner-owner">Account owner</span></td>
-        </tr>
-        <tr>
-          <td><span class="chip chip-danger">blocked</span></td>
-          <td class="t-title"><b>Unblock Money keywords in top 10</b><p class="because">Collector reported: HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</p></td>
-          <td><code class="agent">seo-cluster</code></td>
-          <td><span class="owner owner-owner">Account owner</span></td>
+          <td><span class="owner owner-claude">Me</span></td>
         </tr>
         <tr>
           <td><span class="chip chip-danger">blocked</span></td>
@@ -694,7 +613,7 @@ ul.gaps li{margin:3px 0}
         </tr>
         <tr>
           <td><span class="chip chip-accent">content</span></td>
-          <td class="t-title"><b>Publish: Ecommerce web design San Diego</b><p class="because">Cadence is 2/week and 4 pieces are still queued. Next targets “ecommerce web design san diego” and links up to /services/web-design/</p><details><summary>detail</summary><pre>type: money-spoke · pillar: web-design · gates: single_h1, toc, key_takeaways, faq_schema, author_box, cover_image, internal_links_up</pre></details></td>
+          <td class="t-title"><b>Publish: How much does website hosting cost?</b><p class="because">Cadence is 2/week and 6 pieces are still queued. Next targets “hosting cost for website” and links up to /services/website-cost-san-diego/</p><details><summary>detail</summary><pre>type: blog · pillar: web-design · gates: single_h1, toc, key_takeaways, faq_schema, author_box, cover_image, internal_links_up</pre></details></td>
           <td><code class="agent">seo-content</code></td>
           <td><span class="owner owner-claude">Me</span></td>
         </tr>
@@ -705,12 +624,6 @@ ul.gaps li{margin:3px 0}
           <td><span class="owner owner-host">Host</span></td>
         </tr>
         <tr>
-          <td><span class="chip chip-danger">blocker</span></td>
-          <td class="t-title"><b>Google APIs unreachable from the workstation</b><p class="because">Declared blocker (low) — blocks </p><details><summary>detail</summary><pre>Resolved by architecture on 2026-08-18, kept visible because it constrains where collection can run. Credentials are valid — GA4 and OAuth answer from the box — but Google&#x27;s edge refuses its IP (ArvanCloud AS57568) for the Search Console and PageSpeed surfaces: an invalid token returns a 403 HTML page instead of a JSON 401, so the request never reaches the API. No credential fixes that. CI on GitHub&#x27;s runners collects those daily at 08:45 UTC and the box merges the result at 09:15.</pre></details></td>
-          <td><span class="muted">—</span></td>
-          <td><span class="owner owner-none">none</span></td>
-        </tr>
-        <tr>
           <td><span class="chip chip-muted">monitor</span></td>
           <td class="t-title"><b>Run drift check against yesterday&#x27;s baseline</b><p class="because">Daily regression guard — a cache flush on this site has silently 404&#x27;d every post before (handoff gotcha #13)</p></td>
           <td><code class="agent">seo-drift</code></td>
@@ -719,12 +632,15 @@ ul.gaps li{margin:3px 0}
     </table></div>
   </section>
   <section class="block">
-    <h2>Blockers — 1 critical</h2>
+    <h2>Blockers — 3 critical</h2>
     <p class="lead">These cap everything downstream. No amount of on-site work substitutes
       for them, so they are shown every day until they clear.</p>
-    <ul class="blockers"><li class="blocker sev-low">
-              <div><b>Google APIs unreachable from the workstation</b><span class="owner owner-none">none</span></div>
-              <p>Resolved by architecture on 2026-08-18, kept visible because it constrains where collection can run. Credentials are valid — GA4 and OAuth answer from the box — but Google&#x27;s edge refuses its IP (ArvanCloud AS57568) for the Search Console and PageSpeed surfaces: an invalid token returns a 403 HTML page instead of a JSON 401, so the request never reaches the API. No credential fixes that. CI on GitHub&#x27;s runners collects those daily at 08:45 UTC and the box merges the result at 09:15.</p>
+    <ul class="blockers"><li class="blocker sev-critical">
+              <div><b>Google API credentials missing</b><span class="owner owner-account-owner">account owner</span></div>
+              <p>Tier -1. Needs service_account.json + api_key. SA also 403s — re-add as GSC Owner.</p>
+            </li><li class="blocker sev-critical">
+              <div><b>WordPress app password missing</b><span class="owner owner-account-owner">account owner</span></div>
+              <p>wp-json/mcp/novamira returns 401 — site is read-only, no fixes can be shipped.</p>
             </li><li class="blocker sev-critical">
               <div><b>Google Business Profile not verified</b><span class="owner owner-client">client</span></div>
               <p>Video verification pending, needs the San Diego partner to film it.</p>
@@ -834,7 +750,7 @@ ul.gaps li{margin:3px 0}
           <td><span class="chip chip-good">quick</span></td>
           <td class="n">760</td>
           <td class="n">19</td>
-          <td class="n"><span class="muted">not measured</span></td>
+          <td class="n"><b class="tone-danger">55</b></td>
           <td class="n">top 10</td>
           <td><a href="https://lenzit.org/services/website-cost-san-diego/" target="_blank" rel="noopener">/services/website-cost-san-diego/</a></td>
         </tr>
@@ -844,7 +760,7 @@ ul.gaps li{margin:3px 0}
           <td><span class="chip chip-muted">content</span></td>
           <td class="n">680</td>
           <td class="n">29</td>
-          <td class="n"><span class="muted">not measured</span></td>
+          <td class="n"><b class="tone-danger">72</b></td>
           <td class="n">top 15</td>
           <td><a href="https://lenzit.org/services/website-cost-san-diego/" target="_blank" rel="noopener">/services/website-cost-san-diego/</a></td>
         </tr>
@@ -854,7 +770,7 @@ ul.gaps li{margin:3px 0}
           <td><span class="chip chip-good">quick</span></td>
           <td class="n">430</td>
           <td class="n">12</td>
-          <td class="n"><span class="muted">not measured</span></td>
+          <td class="n"><b class="tone-danger">66</b></td>
           <td class="n">top 5</td>
           <td><a href="https://lenzit.org/services/website-cost-san-diego/" target="_blank" rel="noopener">/services/website-cost-san-diego/</a></td>
         </tr>
@@ -864,7 +780,7 @@ ul.gaps li{margin:3px 0}
           <td><span class="chip chip-good">quick</span></td>
           <td class="n">360</td>
           <td class="n">10</td>
-          <td class="n"><span class="muted">not measured</span></td>
+          <td class="n"><b class="tone-danger">55</b></td>
           <td class="n">top 5</td>
           <td><a href="https://lenzit.org/services/website-cost-san-diego/" target="_blank" rel="noopener">/services/website-cost-san-diego/</a></td>
         </tr>
@@ -874,7 +790,7 @@ ul.gaps li{margin:3px 0}
           <td><span class="chip chip-good">quick</span></td>
           <td class="n">370</td>
           <td class="n">17</td>
-          <td class="n"><span class="muted">not measured</span></td>
+          <td class="n"><b class="tone-danger">78</b></td>
           <td class="n">top 10</td>
           <td><a href="https://lenzit.org/services/website-cost-san-diego/" target="_blank" rel="noopener">/services/website-cost-san-diego/</a></td>
         </tr>
@@ -904,7 +820,7 @@ ul.gaps li{margin:3px 0}
           <td><span class="chip chip-muted">content</span></td>
           <td class="n">120</td>
           <td class="n">28</td>
-          <td class="n"><span class="muted">not measured</span></td>
+          <td class="n"><b class="tone-danger">86</b></td>
           <td class="n">top 15</td>
           <td><a href="https://lenzit.org/services/web-design/" target="_blank" rel="noopener">/services/web-design/</a></td>
         </tr>
@@ -944,7 +860,7 @@ ul.gaps li{margin:3px 0}
           <td><span class="chip chip-accent">money</span></td>
           <td class="n">150</td>
           <td class="n">34</td>
-          <td class="n"><span class="muted">not measured</span></td>
+          <td class="n"><b class="tone-danger">50</b></td>
           <td class="n">top 25</td>
           <td><a href="https://lenzit.org/services/seo/" target="_blank" rel="noopener">/services/seo/</a></td>
         </tr>
@@ -964,7 +880,7 @@ ul.gaps li{margin:3px 0}
           <td><span class="chip chip-muted">content</span></td>
           <td class="n">60</td>
           <td class="n">27</td>
-          <td class="n"><span class="muted">not measured</span></td>
+          <td class="n"><b class="tone-danger">90</b></td>
           <td class="n">top 15</td>
           <td><a href="https://lenzit.org/services/web-design/" target="_blank" rel="noopener">/services/web-design/</a></td>
         </tr>
@@ -984,7 +900,7 @@ ul.gaps li{margin:3px 0}
           <td><span class="chip chip-good">quick</span></td>
           <td class="n">50</td>
           <td class="n">18</td>
-          <td class="n"><span class="muted">not measured</span></td>
+          <td class="n"><b class="tone-danger">52</b></td>
           <td class="n">top 10</td>
           <td><a href="https://lenzit.org/services/website-cost-san-diego/" target="_blank" rel="noopener">/services/website-cost-san-diego/</a></td>
         </tr>
@@ -1004,7 +920,7 @@ ul.gaps li{margin:3px 0}
           <td><span class="chip chip-good">quick</span></td>
           <td class="n">30</td>
           <td class="n">0</td>
-          <td class="n"><span class="muted">not measured</span></td>
+          <td class="n"><b class="tone-danger">66</b></td>
           <td class="n">top 5</td>
           <td><a href="https://lenzit.org/services/web-design/" target="_blank" rel="noopener">/services/web-design/</a></td>
         </tr>
@@ -1014,7 +930,7 @@ ul.gaps li{margin:3px 0}
           <td><span class="chip chip-good">quick</span></td>
           <td class="n">20</td>
           <td class="n">0</td>
-          <td class="n"><span class="muted">not measured</span></td>
+          <td class="n"><b class="tone-danger">65</b></td>
           <td class="n">top 5</td>
           <td><a href="https://lenzit.org/services/web-design/wordpress/" target="_blank" rel="noopener">/services/web-design/wordpress/</a></td>
         </tr>
@@ -1087,27 +1003,15 @@ ul.gaps li{margin:3px 0}
     panels say so rather than showing a zero — a zero would claim we measured and found
     nothing, which is a different and much more misleading statement.</p>
   <div class="cols">
-    <section class="block"><h2>Search Console</h2>
-        <div class="blocked-panel">
-          <span class="pill pill-muted">Awaiting data</span>
-          <h3>Search Console</h3>
-          <p>HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</p>
-          <p class="hint">This panel fills in automatically on the next run once the
-             credential is in place. Nothing here is estimated in the meantime.</p>
-        </div></section>
+    <section class="block"><h2>Search Console</h2><div class="scroller"><table class="grid">
+          <thead><tr><th>Query</th><th>Clicks</th><th>Impr.</th><th>Pos.</th></tr></thead>
+          <tbody><tr><td class="t-title">lenzit</td><td class="n">5</td><td class="n">108</td><td class="n">3.4</td></tr><tr><td class="t-title">ai automation for business san diego</td><td class="n">0</td><td class="n">2</td><td class="n">75</td></tr><tr><td class="t-title">ai automation san diego</td><td class="n">0</td><td class="n">2</td><td class="n">78.5</td></tr><tr><td class="t-title">ai business solutions san diego</td><td class="n">0</td><td class="n">6</td><td class="n">90.2</td></tr><tr><td class="t-title">ai consultant san diego</td><td class="n">0</td><td class="n">2</td><td class="n">97.5</td></tr><tr><td class="t-title">ai consulting company in san diego</td><td class="n">0</td><td class="n">18</td><td class="n">69.6</td></tr><tr><td class="t-title">ai consulting company san diego</td><td class="n">0</td><td class="n">2</td><td class="n">67</td></tr><tr><td class="t-title">ai consulting firms in san diego</td><td class="n">0</td><td class="n">3</td><td class="n">90.3</td></tr><tr><td class="t-title">ai optimization encinitas</td><td class="n">0</td><td class="n">11</td><td class="n">94</td></tr><tr><td class="t-title">ai strategy services san diego</td><td class="n">0</td><td class="n">5</td><td class="n">94.6</td></tr><tr><td class="t-title">ai technology consulting san diego</td><td class="n">0</td><td class="n">11</td><td class="n">73.5</td></tr><tr><td class="t-title">breezit lt</td><td class="n">0</td><td class="n">1</td><td class="n">49</td></tr><tr><td class="t-title">cost for squarespace</td><td class="n">0</td><td class="n">1</td><td class="n">76</td></tr><tr><td class="t-title">cost for squarespace website</td><td class="n">0</td><td class="n">2</td><td class="n">73.5</td></tr><tr><td class="t-title">cost of a squarespace website</td><td class="n">0</td><td class="n">2</td><td class="n">77.5</td></tr><tr><td class="t-title">cost of squarespace</td><td class="n">0</td><td class="n">5</td><td class="n">79.4</td></tr><tr><td class="t-title">cost of squarespace domain</td><td class="n">0</td><td class="n">1</td><td class="n">82</td></tr><tr><td class="t-title">cost of squarespace site</td><td class="n">0</td><td class="n">1</td><td class="n">68</td></tr><tr><td class="t-title">cost of squarespace website</td><td class="n">0</td><td class="n">9</td><td class="n">75.1</td></tr><tr><td class="t-title">cost of website on squarespace</td><td class="n">0</td><td class="n">1</td><td class="n">55</td></tr><tr><td class="t-title">cost squarespace</td><td class="n">0</td><td class="n">2</td><td class="n">71</td></tr><tr><td class="t-title">costs squarespace</td><td class="n">0</td><td class="n">1</td><td class="n">58</td></tr><tr><td class="t-title">does squarespace cost money</td><td class="n">0</td><td class="n">1</td><td class="n">73</td></tr><tr><td class="t-title">enterprise ai platform san diego</td><td class="n">0</td><td class="n">10</td><td class="n">71.4</td></tr><tr><td class="t-title">free seo analysis san diego</td><td class="n">0</td><td class="n">1</td><td class="n">93</td></tr><tr><td class="t-title">how expensive is squarespace</td><td class="n">0</td><td class="n">1</td><td class="n">70</td></tr><tr><td class="t-title">how much are squarespace websites</td><td class="n">0</td><td class="n">2</td><td class="n">73.5</td></tr><tr><td class="t-title">how much do small business spend on marketing</td><td class="n">0</td><td class="n">1</td><td class="n">92</td></tr><tr><td class="t-title">how much do small businesses spend on marketing</td><td class="n">0</td><td class="n">2</td><td class="n">86</td></tr><tr><td class="t-title">how much do squarespace websites cost</td><td class="n">0</td><td class="n">2</td><td class="n">71</td></tr><tr><td class="t-title">how much does a small business spend on marketing</td><td class="n">0</td><td class="n">1</td><td class="n">88</td></tr><tr><td class="t-title">how much does a square space website cost</td><td class="n">0</td><td class="n">1</td><td class="n">74</td></tr><tr><td class="t-title">how much does a squarespace site cost</td><td class="n">0</td><td class="n">1</td><td class="n">70</td></tr><tr><td class="t-title">how much does a squarespace website cost</td><td class="n">0</td><td class="n">6</td><td class="n">74.2</td></tr><tr><td class="t-title">how much does a squarespace website cost uk</td><td class="n">0</td><td class="n">1</td><td class="n">86</td></tr><tr><td class="t-title">how much does a squarespace website design cost</td><td class="n">0</td><td class="n">1</td><td class="n">72</td></tr><tr><td class="t-title">how much does it cost for squarespace website</td><td class="n">0</td><td class="n">1</td><td class="n">76</td></tr><tr><td class="t-title">how much does it cost to have a squarespace website</td><td class="n">0</td><td class="n">1</td><td class="n">75</td></tr><tr><td class="t-title">how much does square space cost</td><td class="n">0</td><td class="n">2</td><td class="n">75</td></tr><tr><td class="t-title">how much does squarespace cost</td><td class="n">0</td><td class="n">10</td><td class="n">73.6</td></tr></tbody></table></div></section>
     <section class="block"><h2>GA4</h2><div class="scroller"><table class="grid">
           <thead><tr><th>Channel</th><th>Sessions</th><th>Users</th></tr></thead>
           <tbody><tr><td>Direct</td><td class="n">51</td><td class="n">45</td></tr><tr><td>Organic Search</td><td class="n">19</td><td class="n">6</td></tr><tr><td>Organic Social</td><td class="n">1</td><td class="n">1</td></tr><tr><td>Referral</td><td class="n">1</td><td class="n">1</td></tr></tbody></table></div></section>
   </div>
-  <section class="block"><h2>Core Web Vitals</h2>
-        <div class="blocked-panel">
-          <span class="pill pill-muted">Awaiting data</span>
-          <h3>PageSpeed Insights</h3>
-          <p>non-JSON response</p>
-          <p class="hint">This panel fills in automatically on the next run once the
-             credential is in place. Nothing here is estimated in the meantime.</p>
-        </div></section>
+  <section class="block"><h2>Core Web Vitals</h2><div class="figure-big"><strong>47</strong><span>performance</span></div>
+          <div class="scroller"><table class="grid"><tbody><tr><td>first-contentful-paint</td><td class="n">4.4 s</td></tr><tr><td>largest-contentful-paint</td><td class="n">10.2 s</td></tr><tr><td>total-blocking-time</td><td class="n">520 ms</td></tr><tr><td>cumulative-layout-shift</td><td class="n">0</td></tr><tr><td>speed-index</td><td class="n">6.7 s</td></tr><tr><td>total-byte-weight</td><td class="n">Total size was 1,617 KiB</td></tr></tbody></table></div></section>
 </div>
 
 <div class="panel" id="content" role="tabpanel">
@@ -1127,7 +1031,7 @@ ul.gaps li{margin:3px 0}
             <p class="because">targets “hosting cost for website” · links up to /services/website-cost-san-diego/</p></td>
           <td><span class="chip chip-muted">blog</span></td>
           <td>web-design</td>
-          <td><span class="pill pill-good">published</span></td>
+          <td><span class="pill pill-muted">planned</span></td>
         </tr>
         <tr>
           <td class="t-title"><b>What does a branding project actually include?</b>
@@ -1169,7 +1073,7 @@ ul.gaps li{margin:3px 0}
             <p class="because">targets “cost to design a website” · links up to /services/website-cost-san-diego/</p></td>
           <td><span class="chip chip-muted">blog</span></td>
           <td>web-design</td>
-          <td><span class="pill pill-good">published</span></td>
+          <td><span class="pill pill-muted">planned</span></td>
         </tr>
         <tr>
           <td class="t-title"><b>How much does a Wix website cost?</b>
@@ -1220,7 +1124,7 @@ ul.gaps li{margin:3px 0}
         <h3>Expansion — content on winnable terms</h3>
         <ul><li>2 posts/week held</li><li>Money spokes for ecommerce + local-SEO</li><li>First non-brand clicks</li><li>Reviews 0 → 8</li></ul>
         <p class="exit"><b>Exit criteria:</b> 8+ posts · 2 new spokes · first non-brand clicks · 8 reviews</p>
-        <p class="outstanding">Still open: reviews</p>
+        <p class="outstanding">Still open: reviews, gsc_credentials</p>
         <p class="agents"><code class="agent">seo-content</code><code class="agent">seo-content-brief</code><code class="agent">seo-cluster</code><code class="agent">seo-geo</code></p>
       </article>
       <article class="theme state-upcoming">
@@ -1241,13 +1145,37 @@ ul.gaps li{margin:3px 0}
       <tbody>
         <tr>
           <td><span class="chip chip-warn">kpi</span></td>
+          <td class="t-title"><b>Re-measure Core Web Vitals and find the payload win (Mobile performance (PSI))</b><p class="because">Mobile performance (PSI) is at risk: 47 → 70 score, needs 0.418/day and is running at -0.324/day</p></td>
+          <td><code class="agent">seo-performance</code></td>
+          <td><span class="owner owner-claude">Me</span></td>
+        </tr>
+        <tr>
+          <td><span class="chip chip-warn">kpi</span></td>
+          <td class="t-title"><b>Pull the GSC query report (Clicks (28d))</b><p class="because">Clicks (28d) is at risk: 9 → 120 clicks, needs 2.018/day and is running at 0.243/day</p></td>
+          <td><code class="agent">seo-google</code></td>
+          <td><span class="owner owner-claude">Me</span></td>
+        </tr>
+        <tr>
+          <td><span class="chip chip-warn">kpi</span></td>
+          <td class="t-title"><b>Strengthen the cluster around the money terms (Money keywords in top 10)</b><p class="because">Money keywords in top 10 is at risk: 0 → 2 keywords, needs 0.036/day and is running at 0.0/day</p></td>
+          <td><code class="agent">seo-cluster</code></td>
+          <td><span class="owner owner-claude">Me</span></td>
+        </tr>
+        <tr>
+          <td><span class="chip chip-warn">kpi</span></td>
           <td class="t-title"><b>Pull the GA4 organic trend (Organic sessions / mo)</b><p class="because">Organic sessions / mo is at risk: 19 → 100 sessions, needs 1.473/day and is running at 0.514/day</p></td>
           <td><code class="agent">seo-google</code></td>
           <td><span class="owner owner-claude">Me</span></td>
         </tr>
         <tr>
+          <td><span class="chip chip-warn">kpi</span></td>
+          <td class="t-title"><b>Check live SERP positions for the target set (Ranking keywords (any position))</b><p class="because">Ranking keywords (any position) is behind: 11 → 40 keywords, needs 0.527/day and is running at 0.297/day</p></td>
+          <td><code class="agent">seo-dataforseo</code></td>
+          <td><span class="owner owner-claude">Me</span></td>
+        </tr>
+        <tr>
           <td><span class="chip chip-accent">content</span></td>
-          <td class="t-title"><b>Publish: Ecommerce web design San Diego</b><p class="because">Cadence is 2/week and 4 pieces are still queued. Next targets “ecommerce web design san diego” and links up to /services/web-design/</p><details><summary>detail</summary><pre>type: money-spoke · pillar: web-design · gates: single_h1, toc, key_takeaways, faq_schema, author_box, cover_image, internal_links_up</pre></details></td>
+          <td class="t-title"><b>Publish: How much does website hosting cost?</b><p class="because">Cadence is 2/week and 6 pieces are still queued. Next targets “hosting cost for website” and links up to /services/website-cost-san-diego/</p><details><summary>detail</summary><pre>type: blog · pillar: web-design · gates: single_h1, toc, key_takeaways, faq_schema, author_box, cover_image, internal_links_up</pre></details></td>
           <td><code class="agent">seo-content</code></td>
           <td><span class="owner owner-claude">Me</span></td>
         </tr>
@@ -1288,47 +1216,6 @@ ul.gaps li{margin:3px 0}
     <div class="scroller"><table class="grid">
       <thead><tr><th>Type</th><th>Task &amp; why it is here</th><th>Runs via</th><th>Owner</th></tr></thead>
       <tbody>
-        <tr>
-          <td><span class="chip chip-danger">blocked</span></td>
-          <td class="t-title"><b>Unblock Mobile performance (PSI)</b><p class="because">Collector reported: non-JSON response</p></td>
-          <td><code class="agent">seo-performance</code></td>
-          <td><span class="owner owner-owner">Account owner</span></td>
-        </tr>
-        <tr>
-          <td><span class="chip chip-danger">blocked</span></td>
-          <td class="t-title"><b>Unblock Impressions (28d)</b><p class="because">Collector reported: HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</p></td>
-          <td><code class="agent">seo-google</code></td>
-          <td><span class="owner owner-owner">Account owner</span></td>
-        </tr>
-        <tr>
-          <td><span class="chip chip-danger">blocked</span></td>
-          <td class="t-title"><b>Unblock Clicks (28d)</b><p class="because">Collector reported: HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</p></td>
-          <td><code class="agent">seo-google</code></td>
-          <td><span class="owner owner-owner">Account owner</span></td>
-        </tr>
-        <tr>
-          <td><span class="chip chip-danger">blocked</span></td>
-          <td class="t-title"><b>Unblock Named non-brand queries</b><p class="because">Collector reported: HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</p></td>
-          <td><code class="agent">seo-google</code></td>
-          <td><span class="owner owner-owner">Account owner</span></td>
-        </tr>
-        <tr>
-          <td><span class="chip chip-danger">blocked</span></td>
-          <td class="t-title"><b>Unblock Ranking keywords (any position)</b><p class="because">Collector reported: HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</p></td>
-          <td><code class="agent">seo-dataforseo</code></td>
-          <td><span class="owner owner-owner">Account owner</span></td>
-        </tr>
-        <tr>
-          <td><span class="chip chip-danger">blocked</span></td>
-          <td class="t-title"><b>Unblock Money keywords in top 10</b><p class="because">Collector reported: HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</p></td>
-          <td><code class="agent">seo-cluster</code></td>
-          <td><span class="owner owner-owner">Account owner</span></td>
-        </tr>
         <tr>
           <td><span class="chip chip-danger">blocked</span></td>
           <td class="t-title"><b>Unblock Referring domains</b><p class="because">Collector reported: Bing reports no inbound links yet — its link report populates over days after a property is verified, so this is indistinguishable from &#x27;not looked yet&#x27; and is not recorded as a measurement</p></td>
@@ -1376,20 +1263,29 @@ ul.gaps li{margin:3px 0}
             </tr>
             <tr>
               <td><span class="chip chip-muted">kpi_regression</span></td>
-              <td class="t-title"><b>organic_sessions</b>
-                <p class="because">Organic sessions / mo fell from 23 on 2026-08-19 to 19 on 2026-08-20 — a 17% drop. Nothing this system did explains it, so it needs a look before it compounds.</p>
+              <td class="t-title"><b>cwv_perf</b>
+                <p class="because">Mobile performance (PSI) fell from 60 on 2026-08-19 to 47 on 2026-08-20 — a 22% drop. Nothing this system did explains it, so it needs a look before it compounds.</p>
                 
                 </td>
-              <td class="n">69</td>
+              <td class="n">86</td>
               <td><span class="pill pill-muted">proposed</span> </td>
             </tr>
             <tr>
               <td><span class="chip chip-muted">kpi_regression</span></td>
               <td class="t-title"><b>gsc_clicks</b>
-                <p class="because">Clicks (28d) fell from 12 on 2026-08-10 to 11 on 2026-08-18 — a 8% drop. Nothing this system did explains it, so it needs a look before it compounds.</p>
+                <p class="because">Clicks (28d) fell from 11 on 2026-08-19 to 9 on 2026-08-20 — a 18% drop. Nothing this system did explains it, so it needs a look before it compounds.</p>
                 
                 </td>
-              <td class="n">33</td>
+              <td class="n">72</td>
+              <td><span class="pill pill-muted">proposed</span> </td>
+            </tr>
+            <tr>
+              <td><span class="chip chip-muted">kpi_regression</span></td>
+              <td class="t-title"><b>organic_sessions</b>
+                <p class="because">Organic sessions / mo fell from 23 on 2026-08-19 to 19 on 2026-08-20 — a 17% drop. Nothing this system did explains it, so it needs a look before it compounds.</p>
+                
+                </td>
+              <td class="n">69</td>
               <td><span class="pill pill-muted">proposed</span> </td>
             </tr>
             <tr>
@@ -1413,7 +1309,7 @@ ul.gaps li{margin:3px 0}
 
   <section class="block">
     <h2>History</h2>
-    <div class="scroller"><table class="grid"><thead><tr><th>Day</th><th>Type</th><th>Target</th><th>Status</th><th>Outcome</th></tr></thead><tbody><tr><td class="mono">2026-08-18</td><td><span class="chip chip-muted">index_submit</span></td><td>changed urls</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-18</td><td><span class="chip chip-muted">ctr_rescue</span></td><td>/contact/</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-10</td><td><span class="chip chip-muted">content_brief</span></td><td>How much does a Wix website cost?</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-10</td><td><span class="chip chip-muted">content_brief</span></td><td>How much does it cost to design a website?</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-09</td><td><span class="chip chip-muted">content_brief</span></td><td>How much does website hosting cost?</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-08</td><td><span class="chip chip-muted">index_submit_unindexed</span></td><td>3 unindexed URLs</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-06</td><td><span class="chip chip-muted">content_brief</span></td><td>What is GEO / AI-search optimization?</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-06</td><td><span class="chip chip-muted">content_brief</span></td><td>How much does SEO cost in San Diego?</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-06</td><td><span class="chip chip-muted">content_brief</span></td><td>Local SEO San Diego</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-06</td><td><span class="chip chip-muted">index_submit_unindexed</span></td><td>5 unindexed URLs</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-06</td><td><span class="chip chip-muted">content_brief</span></td><td>Ecommerce web design San Diego</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-06</td><td><span class="chip chip-muted">content_brief</span></td><td>What does a branding project actually include?</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-06</td><td><span class="chip chip-muted">index_submit_unindexed</span></td><td>4 unindexed URLs</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-03</td><td><span class="chip chip-muted">ctr_rescue</span></td><td>/local-seo-checklist-san-diego/</td><td><span class="pill pill-muted">skipped</span></td><td>—</td></tr><tr><td class="mono">2026-08-03</td><td><span class="chip chip-muted">ctr_rescue</span></td><td>/contact/</td><td><span class="pill pill-danger">failed</span></td><td>—</td></tr><tr><td class="mono">2026-08-03</td><td><span class="chip chip-muted">ctr_rescue</span></td><td>/consultation/</td><td><span class="pill pill-muted">skipped</span></td><td>—</td></tr><tr><td class="mono">2026-08-03</td><td><span class="chip chip-muted">ctr_rescue</span></td><td>/author/mehran/</td><td><span class="pill pill-muted">skipped</span></td><td>—</td></tr></tbody></table></div>
+    <div class="scroller"><table class="grid"><thead><tr><th>Day</th><th>Type</th><th>Target</th><th>Status</th><th>Outcome</th></tr></thead><tbody><tr><td class="mono">2026-08-17</td><td><span class="chip chip-muted">ctr_rescue</span></td><td>/contact/</td><td><span class="pill pill-danger">failed</span></td><td>—</td></tr><tr><td class="mono">2026-08-10</td><td><span class="chip chip-muted">content_brief</span></td><td>How much does a Wix website cost?</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-10</td><td><span class="chip chip-muted">content_brief</span></td><td>How much does it cost to design a website?</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-09</td><td><span class="chip chip-muted">content_brief</span></td><td>How much does website hosting cost?</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-08</td><td><span class="chip chip-muted">index_submit_unindexed</span></td><td>3 unindexed URLs</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-06</td><td><span class="chip chip-muted">content_brief</span></td><td>What is GEO / AI-search optimization?</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-06</td><td><span class="chip chip-muted">content_brief</span></td><td>How much does SEO cost in San Diego?</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-06</td><td><span class="chip chip-muted">content_brief</span></td><td>Local SEO San Diego</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-06</td><td><span class="chip chip-muted">index_submit_unindexed</span></td><td>5 unindexed URLs</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-06</td><td><span class="chip chip-muted">content_brief</span></td><td>Ecommerce web design San Diego</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-06</td><td><span class="chip chip-muted">content_brief</span></td><td>What does a branding project actually include?</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-06</td><td><span class="chip chip-muted">index_submit_unindexed</span></td><td>4 unindexed URLs</td><td><span class="pill pill-good">done</span></td><td>—</td></tr><tr><td class="mono">2026-08-03</td><td><span class="chip chip-muted">ctr_rescue</span></td><td>/local-seo-checklist-san-diego/</td><td><span class="pill pill-muted">skipped</span></td><td>—</td></tr><tr><td class="mono">2026-08-03</td><td><span class="chip chip-muted">ctr_rescue</span></td><td>/contact/</td><td><span class="pill pill-danger">failed</span></td><td>—</td></tr><tr><td class="mono">2026-08-03</td><td><span class="chip chip-muted">ctr_rescue</span></td><td>/consultation/</td><td><span class="pill pill-muted">skipped</span></td><td>—</td></tr><tr><td class="mono">2026-08-03</td><td><span class="chip chip-muted">ctr_rescue</span></td><td>/author/mehran/</td><td><span class="pill pill-muted">skipped</span></td><td>—</td></tr></tbody></table></div>
   </section>
 </div>
 
@@ -1422,23 +1318,7 @@ ul.gaps li{margin:3px 0}
     if a number on the dashboard looks wrong, its origin is in here.</p>
   <div class="scroller"><table class="grid">
     <thead><tr><th>When</th><th>Source</th><th>What happened</th></tr></thead>
-    <tbody><tr><td class="mono">2026-08-20 09:15:19</td><td><span class="chip chip-muted">backlinks</span></td><td>not yet populated — 0 raw links</td></tr><tr><td class="mono">2026-08-20 09:15:18</td><td><span class="chip chip-muted">ga4</span></td><td>19 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-20 09:15:18</td><td><span class="chip chip-muted">positions</span></td><td>BLOCKED — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</td></tr><tr><td class="mono">2026-08-20 09:15:17</td><td><span class="chip chip-muted">gsc</span></td><td>BLOCKED — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</td></tr><tr><td class="mono">2026-08-20 09:15:16</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 29/29 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-20 09:15:13</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 29 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-20 09:15:04</td><td><span class="chip chip-muted">catchup</span></td><td>declined to backfill 5 day(s): Search Console is unreachable here (HttpError). Crawl-only backfill states today&#x27;s measurements under past dates rather than recovering anything.</td></tr><tr><td class="mono">2026-08-19 09:15:17</td><td><span class="chip chip-muted">backlinks</span></td><td>not yet populated — 0 raw links</td></tr><tr><td class="mono">2026-08-19 09:15:16</td><td><span class="chip chip-muted">ga4</span></td><td>23 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-19 09:15:16</td><td><span class="chip chip-muted">positions</span></td><td>BLOCKED — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</td></tr><tr><td class="mono">2026-08-19 09:15:14</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 29/29 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-19 09:15:14</td><td><span class="chip chip-muted">gsc</span></td><td>BLOCKED — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</td></tr><tr><td class="mono">2026-08-19 09:15:11</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 29 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-19 09:15:03</td><td><span class="chip chip-muted">catchup</span></td><td>declined to backfill 6 day(s): Search Console is unreachable here (HttpError). Crawl-only backfill states today&#x27;s measurements under past dates rather than recovering anything.</td></tr><tr><td class="mono">2026-08-18 14:08:45</td><td><span class="chip chip-muted">ga4</span></td><td>26 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-18 14:08:45</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for cwv_perf on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 14:08:45</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for ranking_keywords on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 14:08:45</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for money_kw_top10 on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 14:08:45</td><td><span class="chip chip-muted">positions</span></td><td>BLOCKED — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</td></tr><tr><td class="mono">2026-08-18 14:08:45</td><td><span class="chip chip-muted">backlinks</span></td><td>not yet populated — 0 raw links</td></tr><tr><td class="mono">2026-08-18 14:08:44</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for gsc_clicks on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 14:08:44</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for gsc_impressions on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 14:08:44</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for nonbrand_queries on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 14:08:44</td><td><span class="chip chip-muted">gsc</span></td><td>BLOCKED — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</td></tr><tr><td class="mono">2026-08-18 14:08:43</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 29/29 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-18 14:08:40</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 29 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-18 14:08:33</td><td><span class="chip chip-muted">catchup</span></td><td>declined to backfill 6 day(s): Search Console is unreachable here (HttpError). Crawl-only backfill states today&#x27;s measurements under past dates rather than recovering anything.</td></tr><tr><td class="mono">2026-08-18 14:08:18</td><td><span class="chip chip-muted">catchup</span></td><td>2026-08-11 removed a second time. The first guard checked only that service_account.json existed; once it did, catch-up backfilled again and wrote blog_posts=10 and indexed_pages=29 under that date, when the real values were 8 and 27 - both posts were published on the 18th. Every Search Console call in that run returned 403 anyway, because Google&#x27;s edge refuses this box&#x27;s IP. The guard now PROBES Search Console rather than trusting the file, so it declines here permanently and the gap stays honest.</td></tr><tr><td class="mono">2026-08-18 14:08:18</td><td><span class="chip chip-muted">catchup</span></td><td>declined to backfill 6 day(s): Search Console is unreachable here (HttpError). Crawl-only backfill states today&#x27;s measurements under past dates rather than recovering anything.</td></tr><tr><td class="mono">2026-08-18 13:44:33</td><td><span class="chip chip-muted">backlinks</span></td><td>not yet populated — 0 raw links</td></tr><tr><td class="mono">2026-08-18 13:44:32</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for gsc_clicks on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 13:44:32</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for gsc_impressions on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 13:44:32</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for nonbrand_queries on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 13:44:32</td><td><span class="chip chip-muted">gsc</span></td><td>BLOCKED — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</td></tr><tr><td class="mono">2026-08-18 13:44:32</td><td><span class="chip chip-muted">ga4</span></td><td>26 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-18 13:44:32</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for cwv_perf on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 13:44:32</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for ranking_keywords on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 13:44:32</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for money_kw_top10 on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 13:44:32</td><td><span class="chip chip-muted">positions</span></td><td>BLOCKED — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</td></tr><tr><td class="mono">2026-08-18 13:44:31</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 29/29 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-18 13:44:28</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 29 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-18 13:36:07</td><td><span class="chip chip-muted">ga4</span></td><td>26 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-18 13:36:07</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for cwv_perf on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 13:36:07</td><td><span class="chip chip-muted">psi</span></td><td>BLOCKED — 500: Lighthouse returned error: Something went wrong.</td></tr><tr><td class="mono">2026-08-18 13:36:07</td><td><span class="chip chip-muted">positions</span></td><td>11/24 targets surfacing · 0 in top 10 · free, from GSC</td></tr><tr><td class="mono">2026-08-18 13:36:07</td><td><span class="chip chip-muted">backlinks</span></td><td>BLOCKED — the claude-seo plugin is not installed here, so Bing cannot be read from this environment (expected on CI — the workstation collects it)</td></tr><tr><td class="mono">2026-08-18 13:36:06</td><td><span class="chip chip-muted">gsc</span></td><td>11 clicks / 681 impressions · 121 non-brand queries · 29 pages</td></tr><tr><td class="mono">2026-08-18 13:36:05</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 29/29 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-18 13:35:55</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 29 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-18 13:31:58</td><td><span class="chip chip-muted">backlinks</span></td><td>not yet populated — 0 raw links</td></tr><tr><td class="mono">2026-08-18 13:31:57</td><td><span class="chip chip-muted">ga4</span></td><td>26 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-18 13:31:57</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for cwv_perf on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 13:31:57</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for ranking_keywords on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 13:31:57</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for money_kw_top10 on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 13:31:57</td><td><span class="chip chip-muted">positions</span></td><td>BLOCKED — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</td></tr><tr><td class="mono">2026-08-18 13:31:56</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 29/29 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-18 13:31:56</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for gsc_clicks on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 13:31:56</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for gsc_impressions on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 13:31:56</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for nonbrand_queries on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 13:31:56</td><td><span class="chip chip-muted">gsc</span></td><td>BLOCKED — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</td></tr><tr><td class="mono">2026-08-18 13:31:53</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 29 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-18 13:23:29</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for cwv_perf on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 13:23:29</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for ranking_keywords on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 13:23:29</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for money_kw_top10 on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 13:23:29</td><td><span class="chip chip-muted">positions</span></td><td>BLOCKED — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</td></tr><tr><td class="mono">2026-08-18 13:23:29</td><td><span class="chip chip-muted">backlinks</span></td><td>not yet populated — 0 raw links</td></tr><tr><td class="mono">2026-08-18 13:23:28</td><td><span class="chip chip-muted">ga4</span></td><td>26 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-18 13:23:27</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 29/29 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-18 13:23:27</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for gsc_clicks on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 13:23:27</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for gsc_impressions on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 13:23:27</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for nonbrand_queries on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 13:23:27</td><td><span class="chip chip-muted">gsc</span></td><td>BLOCKED — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</td></tr><tr><td class="mono">2026-08-18 13:23:24</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 29 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-18 12:52:07</td><td><span class="chip chip-muted">action</span></td><td>DONE index_submit on changed urls — IndexNow HTTP 200 for 1 URL(s)</td></tr><tr><td class="mono">2026-08-18 12:48:48</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for cwv_perf on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 12:48:48</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for ranking_keywords on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 12:48:48</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for money_kw_top10 on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 12:48:48</td><td><span class="chip chip-muted">positions</span></td><td>BLOCKED — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</td></tr><tr><td class="mono">2026-08-18 12:48:48</td><td><span class="chip chip-muted">backlinks</span></td><td>BLOCKED — no Bing Webmaster API key configured</td></tr><tr><td class="mono">2026-08-18 12:48:47</td><td><span class="chip chip-muted">ga4</span></td><td>26 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-18 12:48:46</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 29/29 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-18 12:48:46</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for gsc_clicks on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 12:48:46</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for gsc_impressions on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 12:48:46</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for nonbrand_queries on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 12:48:46</td><td><span class="chip chip-muted">gsc</span></td><td>BLOCKED — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</td></tr><tr><td class="mono">2026-08-18 12:48:07</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 29 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-18 12:44:06</td><td><span class="chip chip-muted">analysis</span></td><td>coverage_gap on /services/website-cost-san-diego/ confirmed real, but NOT executed on the money page. Verified against the live HTML rather than post_content, which is empty because the page is Elementor: 2,324 visible words and not one use of &#x27;creating&#x27; or &#x27;making&#x27; phrasing. The page also has no _lz_faq meta - its FAQPage schema is parsed from the Elementor copy - so there is no additive hook, and editing the Elementor JSON of the site&#x27;s highest-value commercial page is exactly the restructuring rule 1 says to propose rather than execute. Covering the three phrasings in a dedicated spoke that links up is also the better SEO call: a 2,324-word page gains little from three more phrasings, while a spoke targeting the phrasing family can rank on its own and pass authority to the hub.</td></tr><tr><td class="mono">2026-08-18 12:42:45</td><td><span class="chip chip-muted">analysis</span></td><td>kpi_regression on gsc_clicks (12 -&gt; 11) reviewed and dismissed: it is 28-day window mechanics, not a regression. The window moved from ending 2026-08-07 to 2026-08-15 and one click aged out, while impressions went 223 -&gt; 681 over the same period. The real finding is underneath it: 7 of the 11 clicks come from the single brand query &#x27;lenzit&#x27; (110 impressions, 6.4% CTR, position 3.4). Every non-brand query sits at position 66-95 - page 7 to page 10 - where 0% CTR is the expected result, not a fault. Clicks cannot be fixed on the page; they are downstream of position, which is downstream of referring domains, still 3 of 10. Rewriting titles to chase CTR at position 70 would be motion without effect.</td></tr><tr><td class="mono">2026-08-18 12:40:49</td><td><span class="chip chip-muted">action</span></td><td>DONE ctr_rescue on /contact/ — meta description rewritten and verified live. The 2026-08-03 and earlier 2026-08-18 attempts both failed for the same reason: json.dumps escaped the em dash to \u2014, PHP wrote those six characters verbatim, and verify_live could never match what it had asked for.</td></tr><tr><td class="mono">2026-08-18 12:21:26</td><td><span class="chip chip-muted">ga4</span></td><td>26 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-18 12:21:26</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for cwv_perf on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 12:21:26</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for ranking_keywords on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 12:21:26</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for money_kw_top10 on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 12:21:26</td><td><span class="chip chip-muted">positions</span></td><td>BLOCKED — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</td></tr><tr><td class="mono">2026-08-18 12:21:26</td><td><span class="chip chip-muted">backlinks</span></td><td>BLOCKED — no Bing Webmaster API key configured</td></tr><tr><td class="mono">2026-08-18 12:21:24</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for gsc_clicks on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 12:21:24</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for gsc_impressions on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 12:21:24</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for nonbrand_queries on 2026-08-18; this run reported blocked</td></tr><tr><td class="mono">2026-08-18 12:21:24</td><td><span class="chip chip-muted">gsc</span></td><td>BLOCKED — HttpError: &lt;HttpError 403 when requesting https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Flenzit.org%2F/searchAnalytics/query?alt=json returned &quot;Forbidden&quot;. Details: &quot;&lt;!DOCTYPE html&gt;
-&lt;html</td></tr><tr><td class="mono">2026-08-18 12:21:23</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 28/28 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-18 12:20:42</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 28 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-18 12:15:48</td><td><span class="chip chip-muted">action</span></td><td>FAILED ctr_rescue on /contact/ — change did not appear live; rolled back</td></tr><tr><td class="mono">2026-08-18 11:47:21</td><td><span class="chip chip-muted">psi</span></td><td>Performance 69 · LCP 5.3 s</td></tr><tr><td class="mono">2026-08-18 11:47:21</td><td><span class="chip chip-muted">positions</span></td><td>11/24 targets surfacing · 0 in top 10 · free, from GSC</td></tr><tr><td class="mono">2026-08-18 11:47:21</td><td><span class="chip chip-muted">backlinks</span></td><td>BLOCKED — no Bing Webmaster API key configured</td></tr><tr><td class="mono">2026-08-18 11:46:59</td><td><span class="chip chip-muted">ga4</span></td><td>25 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-18 11:46:58</td><td><span class="chip chip-muted">gsc</span></td><td>11 clicks / 681 impressions · 121 non-brand queries · 29 pages</td></tr><tr><td class="mono">2026-08-18 11:46:57</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 28/28 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-18 11:46:45</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 28 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-18 10:59:31</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 28/28 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-18 10:59:31</td><td><span class="chip chip-muted">gsc</span></td><td>BLOCKED — service_account.json not present</td></tr><tr><td class="mono">2026-08-18 10:59:31</td><td><span class="chip chip-muted">ga4</span></td><td>BLOCKED — service_account.json not present</td></tr><tr><td class="mono">2026-08-18 10:59:31</td><td><span class="chip chip-muted">psi</span></td><td>BLOCKED — no api_key</td></tr><tr><td class="mono">2026-08-18 10:59:31</td><td><span class="chip chip-muted">positions</span></td><td>BLOCKED — service_account.json not present</td></tr><tr><td class="mono">2026-08-18 10:59:31</td><td><span class="chip chip-muted">backlinks</span></td><td>BLOCKED — no Bing Webmaster API key configured</td></tr><tr><td class="mono">2026-08-18 10:58:52</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 28 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-18 10:58:45</td><td><span class="chip chip-muted">catchup</span></td><td>declined to backfill 6 day(s): no google-api.json. Crawl-only backfill states today&#x27;s measurements under past dates rather than recovering anything.</td></tr><tr><td class="mono">2026-08-18 10:57:43</td><td><span class="chip chip-muted">catchup</span></td><td>declined to backfill 6 day(s): no google-api.json. Crawl-only backfill states today&#x27;s measurements under past dates rather than recovering anything.</td></tr><tr><td class="mono">2026-08-18 10:53:36</td><td><span class="chip chip-muted">catchup</span></td><td>Rows for 2026-08-11 and 08-12 were removed. run_daily.sh calls catchup.py --run automatically, so testing the cron wrapper on 08-18 backfilled them - writing TODAY&#x27;s crawl under those dates: blog_posts 9 and indexed_pages 28, when the real values were 8 and 27 (the hosting post did not exist until 08-18). With Google blocked there is no 28-day window to recover, so a backfill can only fabricate. catchup.py now refuses any day whose recoverable signal would be crawl-only.</td></tr><tr><td class="mono">2026-08-18 10:21:02</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 28/28 URLs live · 0 check failures</td></tr></tbody></table></div>
+    <tbody><tr><td class="mono">2026-08-20 09:19:24</td><td><span class="chip chip-muted">backlinks</span></td><td>not yet populated — 0 raw links</td></tr><tr><td class="mono">2026-08-20 09:19:23</td><td><span class="chip chip-muted">psi</span></td><td>Performance 47 · LCP 10.2 s</td></tr><tr><td class="mono">2026-08-20 09:19:23</td><td><span class="chip chip-muted">positions</span></td><td>11/24 targets surfacing · 0 in top 10 · free, from GSC</td></tr><tr><td class="mono">2026-08-20 09:19:01</td><td><span class="chip chip-muted">ga4</span></td><td>19 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-20 09:19:00</td><td><span class="chip chip-muted">gsc</span></td><td>9 clicks / 892 impressions · 150 non-brand queries · 29 pages</td></tr><tr><td class="mono">2026-08-20 09:18:59</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 29/29 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-20 09:18:56</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 29 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-20 09:18:49</td><td><span class="chip chip-muted">catchup</span></td><td>day 2026-08-20 was missed and has been reconstructed; the crawl and the 28-day Search Console window are real, any point-in-time SERP reading for that date is permanently gone</td></tr><tr><td class="mono">2026-08-20 09:15:32</td><td><span class="chip chip-muted">backlinks</span></td><td>not yet populated — 0 raw links</td></tr><tr><td class="mono">2026-08-20 09:15:31</td><td><span class="chip chip-muted">psi</span></td><td>Performance 60 · LCP 9.9 s</td></tr><tr><td class="mono">2026-08-20 09:15:31</td><td><span class="chip chip-muted">positions</span></td><td>11/24 targets surfacing · 0 in top 10 · free, from GSC</td></tr><tr><td class="mono">2026-08-20 09:15:17</td><td><span class="chip chip-muted">ga4</span></td><td>19 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-20 09:15:15</td><td><span class="chip chip-muted">gsc</span></td><td>9 clicks / 892 impressions · 150 non-brand queries · 29 pages</td></tr><tr><td class="mono">2026-08-20 09:15:14</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 29/29 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-20 09:15:11</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 29 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-19 09:19:52</td><td><span class="chip chip-muted">backlinks</span></td><td>not yet populated — 0 raw links</td></tr><tr><td class="mono">2026-08-19 09:19:51</td><td><span class="chip chip-muted">psi</span></td><td>Performance 60 · LCP 9.8 s</td></tr><tr><td class="mono">2026-08-19 09:19:51</td><td><span class="chip chip-muted">positions</span></td><td>11/24 targets surfacing · 0 in top 10 · free, from GSC</td></tr><tr><td class="mono">2026-08-19 09:19:37</td><td><span class="chip chip-muted">ga4</span></td><td>23 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-19 09:19:36</td><td><span class="chip chip-muted">gsc</span></td><td>11 clicks / 803 impressions · 137 non-brand queries · 29 pages</td></tr><tr><td class="mono">2026-08-19 09:19:35</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 29/29 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-19 09:19:32</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 29 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-19 09:19:25</td><td><span class="chip chip-muted">catchup</span></td><td>day 2026-08-19 was missed and has been reconstructed; the crawl and the 28-day Search Console window are real, any point-in-time SERP reading for that date is permanently gone</td></tr><tr><td class="mono">2026-08-19 09:15:17</td><td><span class="chip chip-muted">backlinks</span></td><td>not yet populated — 0 raw links</td></tr><tr><td class="mono">2026-08-19 09:15:16</td><td><span class="chip chip-muted">psi</span></td><td>BLOCKED — 500: Lighthouse returned error: Something went wrong.</td></tr><tr><td class="mono">2026-08-19 09:15:16</td><td><span class="chip chip-muted">positions</span></td><td>11/24 targets surfacing · 0 in top 10 · free, from GSC</td></tr><tr><td class="mono">2026-08-19 09:15:15</td><td><span class="chip chip-muted">gsc</span></td><td>11 clicks / 803 impressions · 137 non-brand queries · 29 pages</td></tr><tr><td class="mono">2026-08-19 09:15:15</td><td><span class="chip chip-muted">ga4</span></td><td>23 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-19 09:15:14</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 29/29 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-19 09:15:10</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 29 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-18 09:19:23</td><td><span class="chip chip-muted">backlinks</span></td><td>not yet populated — 0 raw links</td></tr><tr><td class="mono">2026-08-18 09:19:22</td><td><span class="chip chip-muted">psi</span></td><td>Performance 60 · LCP 9.1 s</td></tr><tr><td class="mono">2026-08-18 09:19:22</td><td><span class="chip chip-muted">positions</span></td><td>11/24 targets surfacing · 0 in top 10 · free, from GSC</td></tr><tr><td class="mono">2026-08-18 09:19:06</td><td><span class="chip chip-muted">ga4</span></td><td>25 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-18 09:19:05</td><td><span class="chip chip-muted">gsc</span></td><td>11 clicks / 681 impressions · 121 non-brand queries · 29 pages</td></tr><tr><td class="mono">2026-08-18 09:19:04</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 27/27 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-18 09:19:01</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 27 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-18 09:18:53</td><td><span class="chip chip-muted">catchup</span></td><td>day 2026-08-18 was missed and has been reconstructed; the crawl and the 28-day Search Console window are real, any point-in-time SERP reading for that date is permanently gone</td></tr><tr><td class="mono">2026-08-18 09:15:43</td><td><span class="chip chip-muted">backlinks</span></td><td>not yet populated — 0 raw links</td></tr><tr><td class="mono">2026-08-18 09:15:42</td><td><span class="chip chip-muted">psi</span></td><td>Performance 59 · LCP 9.5 s</td></tr><tr><td class="mono">2026-08-18 09:15:42</td><td><span class="chip chip-muted">positions</span></td><td>11/24 targets surfacing · 0 in top 10 · free, from GSC</td></tr><tr><td class="mono">2026-08-18 09:15:23</td><td><span class="chip chip-muted">ga4</span></td><td>25 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-18 09:15:21</td><td><span class="chip chip-muted">gsc</span></td><td>11 clicks / 681 impressions · 121 non-brand queries · 29 pages</td></tr><tr><td class="mono">2026-08-18 09:15:20</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 27/27 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-18 09:15:10</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 27 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-17 09:45:51</td><td><span class="chip chip-muted">backlinks</span></td><td>not yet populated — 0 raw links</td></tr><tr><td class="mono">2026-08-17 09:45:51</td><td><span class="chip chip-muted">backlinks</span></td><td>Referring domains: None</td></tr><tr><td class="mono">2026-08-17 09:45:49</td><td><span class="chip chip-muted">store</span></td><td>kept the existing ok reading for cwv_perf on 2026-08-17; this run reported blocked</td></tr><tr><td class="mono">2026-08-17 09:45:49</td><td><span class="chip chip-muted">psi</span></td><td>BLOCKED — 500: Lighthouse returned error: Something went wrong.</td></tr><tr><td class="mono">2026-08-17 09:45:49</td><td><span class="chip chip-muted">positions</span></td><td>10/24 targets surfacing · 0 in top 10 · free, from GSC</td></tr><tr><td class="mono">2026-08-17 09:45:49</td><td><span class="chip chip-muted">serp</span></td><td>SKIPPED — balance $-0.0357 below the $0.05 budget for this run</td></tr><tr><td class="mono">2026-08-17 09:45:48</td><td><span class="chip chip-muted">ga4</span></td><td>26 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-17 09:45:47</td><td><span class="chip chip-muted">gsc</span></td><td>11 clicks / 618 impressions · 111 non-brand queries · 29 pages</td></tr><tr><td class="mono">2026-08-17 09:45:43</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 27/27 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-17 09:45:09</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 27 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-17 09:26:43</td><td><span class="chip chip-muted">action</span></td><td>FAILED ctr_rescue on /contact/ — change did not appear live; rolled back</td></tr><tr><td class="mono">2026-08-17 09:19:36</td><td><span class="chip chip-muted">backlinks</span></td><td>not yet populated — 0 raw links</td></tr><tr><td class="mono">2026-08-17 09:19:35</td><td><span class="chip chip-muted">psi</span></td><td>Performance 60 · LCP 9.3 s</td></tr><tr><td class="mono">2026-08-17 09:19:35</td><td><span class="chip chip-muted">positions</span></td><td>10/24 targets surfacing · 0 in top 10 · free, from GSC</td></tr><tr><td class="mono">2026-08-17 09:19:18</td><td><span class="chip chip-muted">ga4</span></td><td>26 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-17 09:19:17</td><td><span class="chip chip-muted">gsc</span></td><td>11 clicks / 618 impressions · 111 non-brand queries · 29 pages</td></tr><tr><td class="mono">2026-08-17 09:19:15</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 27/27 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-17 09:19:12</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 27 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-17 09:19:04</td><td><span class="chip chip-muted">catchup</span></td><td>day 2026-08-17 was missed and has been reconstructed; the crawl and the 28-day Search Console window are real, any point-in-time SERP reading for that date is permanently gone</td></tr><tr><td class="mono">2026-08-17 09:15:42</td><td><span class="chip chip-muted">backlinks</span></td><td>not yet populated — 0 raw links</td></tr><tr><td class="mono">2026-08-17 09:15:41</td><td><span class="chip chip-muted">psi</span></td><td>Performance 60 · LCP 9.1 s</td></tr><tr><td class="mono">2026-08-17 09:15:41</td><td><span class="chip chip-muted">positions</span></td><td>10/24 targets surfacing · 0 in top 10 · free, from GSC</td></tr><tr><td class="mono">2026-08-17 09:15:24</td><td><span class="chip chip-muted">ga4</span></td><td>26 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-17 09:15:22</td><td><span class="chip chip-muted">gsc</span></td><td>11 clicks / 618 impressions · 111 non-brand queries · 29 pages</td></tr><tr><td class="mono">2026-08-17 09:15:21</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 27/27 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-17 09:15:09</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 27 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-16 09:20:21</td><td><span class="chip chip-muted">backlinks</span></td><td>not yet populated — 0 raw links</td></tr><tr><td class="mono">2026-08-16 09:20:20</td><td><span class="chip chip-muted">psi</span></td><td>Performance 60 · LCP 9.3 s</td></tr><tr><td class="mono">2026-08-16 09:20:20</td><td><span class="chip chip-muted">positions</span></td><td>9/24 targets surfacing · 0 in top 10 · free, from GSC</td></tr><tr><td class="mono">2026-08-16 09:20:06</td><td><span class="chip chip-muted">ga4</span></td><td>26 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-16 09:20:04</td><td><span class="chip chip-muted">gsc</span></td><td>14 clicks / 536 impressions · 91 non-brand queries · 31 pages</td></tr><tr><td class="mono">2026-08-16 09:20:03</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 27/27 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-16 09:19:59</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 27 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-16 09:19:40</td><td><span class="chip chip-muted">catchup</span></td><td>day 2026-08-15 was missed and has been reconstructed; the crawl and the 28-day Search Console window are real, any point-in-time SERP reading for that date is permanently gone</td></tr><tr><td class="mono">2026-08-16 09:15:42</td><td><span class="chip chip-muted">backlinks</span></td><td>not yet populated — 0 raw links</td></tr><tr><td class="mono">2026-08-16 09:15:41</td><td><span class="chip chip-muted">psi</span></td><td>Performance 60 · LCP 9.3 s</td></tr><tr><td class="mono">2026-08-16 09:15:41</td><td><span class="chip chip-muted">positions</span></td><td>9/24 targets surfacing · 0 in top 10 · free, from GSC</td></tr><tr><td class="mono">2026-08-16 09:15:26</td><td><span class="chip chip-muted">ga4</span></td><td>26 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-16 09:15:24</td><td><span class="chip chip-muted">gsc</span></td><td>14 clicks / 536 impressions · 91 non-brand queries · 31 pages</td></tr><tr><td class="mono">2026-08-16 09:15:23</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 27/27 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-16 09:15:08</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 27 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-14 09:15:35</td><td><span class="chip chip-muted">backlinks</span></td><td>BLOCKED — Bing Webmaster request failed (ConnectionError)</td></tr><tr><td class="mono">2026-08-14 09:15:34</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 0 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-14 09:15:34</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 0.0% · 0/0 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-14 09:15:34</td><td><span class="chip chip-muted">gsc</span></td><td>BLOCKED — TransportError: Unable to find the server at oauth2.googleapis.com</td></tr><tr><td class="mono">2026-08-14 09:15:34</td><td><span class="chip chip-muted">ga4</span></td><td>BLOCKED — ServiceUnavailable: 503 errors resolving analyticsdata.googleapis.com:443: [field:hostname lookup error:address lookup failed for analyticsdata.googleapis.com:443: DNS server returned general failure]</td></tr><tr><td class="mono">2026-08-14 09:15:34</td><td><span class="chip chip-muted">positions</span></td><td>BLOCKED — TransportError: Unable to find the server at oauth2.googleapis.com</td></tr><tr><td class="mono">2026-08-14 09:15:18</td><td><span class="chip chip-muted">ga4</span></td><td>BLOCKED — ServiceUnavailable: 503 errors resolving analyticsdata.googleapis.com:443: [field:hostname lookup error:address lookup failed for analyticsdata.googleapis.com:443: DNS server returned general failure]</td></tr><tr><td class="mono">2026-08-14 09:15:18</td><td><span class="chip chip-muted">positions</span></td><td>BLOCKED — TransportError: Unable to find the server at oauth2.googleapis.com</td></tr><tr><td class="mono">2026-08-14 09:15:18</td><td><span class="chip chip-muted">backlinks</span></td><td>BLOCKED — Bing Webmaster request failed (ConnectionError)</td></tr><tr><td class="mono">2026-08-14 09:15:18</td><td><span class="chip chip-muted">catchup</span></td><td>day 2026-08-14 was missed and has been reconstructed; the crawl and the 28-day Search Console window are real, any point-in-time SERP reading for that date is permanently gone</td></tr><tr><td class="mono">2026-08-14 09:15:17</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 0 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-14 09:15:17</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 0.0% · 0/0 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-14 09:15:17</td><td><span class="chip chip-muted">gsc</span></td><td>BLOCKED — TransportError: Unable to find the server at oauth2.googleapis.com</td></tr><tr><td class="mono">2026-08-13 09:15:34</td><td><span class="chip chip-muted">gsc</span></td><td>BLOCKED — TransportError: Unable to find the server at oauth2.googleapis.com</td></tr><tr><td class="mono">2026-08-13 09:15:34</td><td><span class="chip chip-muted">ga4</span></td><td>BLOCKED — ServiceUnavailable: 503 errors resolving analyticsdata.googleapis.com:443: [field:hostname lookup error:address lookup failed for analyticsdata.googleapis.com:443: DNS server returned general failure]</td></tr><tr><td class="mono">2026-08-13 09:15:34</td><td><span class="chip chip-muted">positions</span></td><td>BLOCKED — TransportError: Unable to find the server at oauth2.googleapis.com</td></tr><tr><td class="mono">2026-08-13 09:15:34</td><td><span class="chip chip-muted">backlinks</span></td><td>BLOCKED — Bing Webmaster request failed (ConnectionError)</td></tr><tr><td class="mono">2026-08-13 09:15:33</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 0 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-13 09:15:33</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 0.0% · 0/0 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-13 09:15:18</td><td><span class="chip chip-muted">backlinks</span></td><td>BLOCKED — Bing Webmaster request failed (ConnectionError)</td></tr><tr><td class="mono">2026-08-13 09:15:18</td><td><span class="chip chip-muted">catchup</span></td><td>day 2026-08-13 was missed and has been reconstructed; the crawl and the 28-day Search Console window are real, any point-in-time SERP reading for that date is permanently gone</td></tr><tr><td class="mono">2026-08-13 09:15:17</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 0 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-13 09:15:17</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 0.0% · 0/0 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-13 09:15:17</td><td><span class="chip chip-muted">gsc</span></td><td>BLOCKED — TransportError: Unable to find the server at oauth2.googleapis.com</td></tr><tr><td class="mono">2026-08-13 09:15:17</td><td><span class="chip chip-muted">ga4</span></td><td>BLOCKED — ServiceUnavailable: 503 errors resolving analyticsdata.googleapis.com:443: [field:hostname lookup error:address lookup failed for analyticsdata.googleapis.com:443: DNS server returned general failure]</td></tr><tr><td class="mono">2026-08-13 09:15:17</td><td><span class="chip chip-muted">positions</span></td><td>BLOCKED — TransportError: Unable to find the server at oauth2.googleapis.com</td></tr><tr><td class="mono">2026-08-12 09:19:10</td><td><span class="chip chip-muted">psi</span></td><td>Performance 59 · LCP 9.9 s</td></tr><tr><td class="mono">2026-08-12 09:19:10</td><td><span class="chip chip-muted">positions</span></td><td>6/24 targets surfacing · 0 in top 10 · free, from GSC</td></tr><tr><td class="mono">2026-08-12 09:19:10</td><td><span class="chip chip-muted">backlinks</span></td><td>not yet populated — 0 raw links</td></tr><tr><td class="mono">2026-08-12 09:18:50</td><td><span class="chip chip-muted">ga4</span></td><td>28 organic sessions (28d)</td></tr><tr><td class="mono">2026-08-12 09:18:49</td><td><span class="chip chip-muted">gsc</span></td><td>12 clicks / 273 impressions · 29 non-brand queries · 26 pages</td></tr><tr><td class="mono">2026-08-12 09:18:48</td><td><span class="chip chip-muted">crawl</span></td><td>Technical health 100.0% · 27/27 URLs live · 0 check failures</td></tr><tr><td class="mono">2026-08-12 09:18:45</td><td><span class="chip chip-muted">crawl</span></td><td>Discovered 27 URLs in the sitemap</td></tr><tr><td class="mono">2026-08-12 09:18:38</td><td><span class="chip chip-muted">catchup</span></td><td>day 2026-08-12 was missed and has been reconstructed; the crawl and the 28-day Search Console window are real, any point-in-time SERP reading for that date is permanently gone</td></tr></tbody></table></div>
 </div>
 
 <div class="panel" id="legend" role="tabpanel">
@@ -1502,50 +1382,6 @@ ul.gaps li{margin:3px 0}
     var want = location.hash.slice(1);
     if (document.getElementById(want)) { show(want); }
   }
-  document.querySelectorAll('[data-goto]').forEach(function (a) {
-    a.addEventListener('click', function (ev) { ev.preventDefault(); show(a.dataset.goto); });
-  });
-
-  // Age the page against the reader's own clock. This file is static and served
-  // from Pages, so it can be days old by the time anyone opens it — and a stale
-  // page showing confident numbers is exactly how a six-day outage goes unnoticed.
-  (function () {
-    var strip = document.querySelector('.runstrip');
-    if (!strip) { return; }
-    var slot = strip.querySelector('[data-age-slot]');
-    var gen = strip.getAttribute('data-generated');
-    if (!slot || !gen) { return; }
-    var parts = gen.split('-');
-    var then = Date.UTC(+parts[0], +parts[1] - 1, +parts[2]);
-    var now = new Date();
-    var today = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
-    var days = Math.round((today - then) / 86400000);
-
-    // The header pill is rendered against the build date, so on a stale file it
-    // would keep saying "ran today" while the strip below said the run had
-    // stopped. Age both from the same number so they cannot disagree.
-    var pill = document.querySelector('[data-fresh-pill]');
-    function setPill(tone, text) {
-      if (!pill) { return; }
-      pill.className = 'pill pill-' + tone;
-      pill.textContent = text;
-    }
-
-    if (days <= 0) { slot.textContent = 'today'; return; }
-    if (days === 1) {
-      slot.textContent = 'yesterday';
-      setPill('good', 'ran yesterday');
-      return;
-    }
-    slot.textContent = days + ' days ago';
-    strip.classList.add(days >= 3 ? 'is-dead' : 'is-stale');
-    if (days >= 3) {
-      slot.textContent = days + ' days ago — the daily run has stopped';
-      setPill('danger', 'last ran ' + days + ' days ago — the schedule may be broken');
-    } else {
-      setPill('warn', 'last ran ' + days + ' days ago');
-    }
-  })();
 
   var root = document.documentElement;
   var btn = document.getElementById('themeToggle');
